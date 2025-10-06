@@ -19,7 +19,7 @@ FisiConnect es una plataforma web diseñada para que los estudiantes de la FISI 
 - Villegas Niño Marco Antonio - Desarrollador
 
 **Asignatura:** Procesos de Software  
-**Ciclo:** 2024-2  
+**Ciclo:** 2025-1  
 **Facultad:** Ingeniería de Sistemas e Informática - UNMSM
 
 ---
