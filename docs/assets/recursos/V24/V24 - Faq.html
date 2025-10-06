@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes - FISI UNMSM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #8B0000; /* Granate UNMSM */
+            --secondary-color: #FFD700; /* Dorado UNMSM */
+            --accent-color: #328CC1;
+            --light-color: #F5F5F5;
+            --dark-color: #1D2731;
+            --software-color: #4E54C8;
+            --sistemas-color: #C83C4B;
+            --computacion-color: #3CAF5F;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(to right, var(--primary-color), #A52A2A);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+            position: relative;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 5px 0;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn {
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            outline: none;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        
+        .btn-outline:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+            font-weight: 600;
+        }
+        
+        .btn-primary:hover {
+            background-color: #e6c300;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .breadcrumb span {
+            color: #777;
+        }
+        
+        /* Hero Section */
+        .faq-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 50px;
+            border-radius: 10px;
+        }
+        
+        .faq-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .faq-hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .search-bar {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            border-radius: 50px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .search-bar input {
+            flex: 1;
+            padding: 15px 20px;
+            border: none;
+            font-size: 1rem;
+        }
+        
+        .search-bar button {
+            padding: 15px 25px;
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            margin-bottom: 60px;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        
+        /* Categories */
+        .categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .category-btn {
+            padding: 10px 20px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        
+        .category-btn.active, .category-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        /* FAQ Grid */
+        .faq-grid {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+        
+        .faq-item.active {
+            border-left: 5px solid var(--primary-color);
+        }
+        
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--dark-color);
+            font-size: 1.1rem;
+        }
+        
+        .faq-answer {
+            margin-top: 20px;
+            color: #666;
+            display: none;
+            line-height: 1.7;
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .faq-item.active .faq-toggle i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-toggle {
+            transition: all 0.3s;
+            color: var(--primary-color);
+        }
+        
+        /* Contact Card */
+        .contact-card {
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            margin-top: 50px;
+            border-top: 5px solid var(--secondary-color);
+        }
+        
+        .contact-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .contact-card p {
+            color: #666;
+            margin-bottom: 25px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(to right, var(--primary-color), #A52A2A);
+            color: white;
+            padding: 60px 0;
+            margin: 50px 0;
+            border-radius: 10px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(to right, var(--dark-color), #2C3E50);
+            color: white;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 5px 10px;
+            }
+            
+            .auth-buttons {
+                margin-top: 15px;
+            }
+            
+            .faq-hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .faq-hero p {
+                font-size: 1rem;
+            }
+            
+            .search-bar {
+                flex-direction: column;
+                border-radius: 10px;
+            }
+            
+            .search-bar input {
+                border-radius: 10px 10px 0 0;
+            }
+            
+            .search-bar button {
+                border-radius: 0 0 10px 10px;
+            }
+            
+            .categories {
+                gap: 10px;
+            }
+            
+            .category-btn {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .contact-card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDUwIDUwIj48cmVjdCB4PSIxMCIgeT0iMTAiIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgZmlsbD0id2hpdGUiIHJ4PSIzIiByeT0iMyIvPjx0ZXh0IHg=" alt="Logo FISI UNMSM">
+                    <h1>Intercambio Académico FISI</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#carreras">Carreras</a></li>
+                        <li><a href="busqueda.html">Explorar</a></li>
+                        <li><a href="subir.html">Subir</a></li>
+                        <li><a href="faq.html" class="active">FAQ</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons">
+                    <button class="btn btn-outline">Iniciar Sesión</button>
+                    <button class="btn btn-primary">Registrarse</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> > <span>Preguntas Frecuentes</span>
+        </div>
+        
+        <!-- Hero Section -->
+        <div class="faq-hero">
+            <div class="faq-hero-content">
+                <h2>Preguntas Frecuentes</h2>
+                <p>Encuentra respuestas a las dudas más comunes sobre nuestra plataforma</p>
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar preguntas...">
+                    <button><i class="fas fa-search"></i> Buscar</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <div class="section-title">
+                <h2>¿Cómo podemos ayudarte?</h2>
+                <p>Explora nuestras categorías de preguntas frecuentes</p>
+            </div>
+            
+            <div class="categories">
+                <button class="category-btn active" data-category="all">Todas</button>
+                <button class="category-btn" data-category="general">General</button>
+                <button class="category-btn" data-category="cuenta">Cuenta</button>
+                <button class="category-btn" data-category="subida">Subida</button>
+                <button class="category-btn" data-category="descarga">Descarga</button>
+                <button class="category-btn" data-category="premium">Premium</button>
+            </div>
+            
+            <div class="faq-grid">
+                <!-- General Questions -->
+                <div class="faq-item" data-category="general">
+                    <div class="faq-question">
+                        <span>¿Qué es Intercambio Académico FISI?</span>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Intercambio Académico FISI es una plataforma diseñada para que los estudiantes de la Facultad de Ingeniería de Sistemas e Informática de la UNMSM puedan compartir apuntes, resúmenes, guías y otros materiales académicos. Nuestro objetivo es facilitar el intercambio de conocimiento y mejorar el rendimiento académico de la comunidad estudiantil.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="general">
+                    <div class="faq-question">
+                        <span>¿Es gratuito usar la plataforma?</span>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, la plataforma es completamente gratuita para todos los estudiantes de la FISI-UNMSM. Creemos en el acceso libre al conocimiento y no cobramos por usar nuestros servicios básicos.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="general">
+                    <div class="faq-question">
+                        <span>¿Quién puede usar la plataforma?</span>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>La plataforma está disponible para todos los estudiantes, docentes y egresados de la Facultad de Ingeniería de Sistemas e Informática de la UNMSM. Para registrarse, necesitas una cuenta de correo institucional (@unmsm.edu.pe).</p>
+                    </div>
+                </div>
+                
+                <!-- Account Questions -->
+                <div class="faq-item" data-category="cuenta">
+                    <div class="faq-question">
+                        <span>¿Cómo creo una cuenta?</span>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Para crear una cuenta, haz clic en el botón "Registrarse" en la esquina superior derecha. Necesitarás proporcionar tu correo institucional (@unmsm.edu.pe), nombre completo, carrera y semestre actual. Recibirás un correo de confirmación para activar tu cuenta.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="cuenta">
+                    <div class="faq-question">
+                        <span>Olvidé mi contraseña, ¿qué hago?</span>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Si olvidaste tu contraseña, haz clic en "Iniciar Sesión" y luego en "¿Olvidaste tu contraseña?". Ingresa tu correo institucional y te enviaremos un enlace para restablecer tu contraseña. El enlace expirará en 24 horas por seguridad.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="cuenta">
+                    <div class="faq-question">
+                        <span>¿Cómo cambio mi información de perfil?</span>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Puedes editar tu información de perfil iniciando sesión y yendo a la sección "Mi Perfil". Desde allí podrás actualizar tu foto, información académica y preferencias. Algunos datos como tu correo electrónico no pueden ser cambiados por razones de seguridad.</p>
+                    </div>
+                </div>
+                
+                <!-- Upload Questions -->
+                <div class="faq-item" data-category="subida">
+                    <div class="faq-question">
+                        <span>¿Cómo subo material a la plataforma?</span>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Para subir material, inicia sesión y haz clic en "Subir" en el menú principal. Completa el formulario con información detallada sobre el material (título, curso, semestre, tipo de archivo, etc.) y selecciona el archivo desde tu dispositivo. Después de la revisión, tu material estará disponible para la comunidad.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="subida">
+                    <div class="faq-question">
+                        <span>¿Qué tipos de archivos puedo subir?</span>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Aceptamos los siguientes formatos: PDF, DOC, DOCX, PPT, PPTX, TXT y ZIP. El tamaño máximo por archivo es de 20MB. Si necesitas subir archivos más grandes o en otros formatos, por favor contáctanos.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="subida">
+                    <div class="faq-question">
+                        <span>¿Puedo subir material de cualquier curso?</span>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, puedes subir material de cualquier curso de las carreras de Ingeniería de Software, Ingeniería de Sistemas o Ciencias de la Computación. Asegúrate de categorizarlo correctamente para que otros usuarios puedan encontrarlo fácilmente.</p>
+                    </div>
+                </div>
+                
+                <!-- Download Questions -->
+                <div class="faq-item" data-category="descarga">
+                    <div class="faq-question">
+                        <span>¿Cómo descargo material?</span>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Para descargar material, busca el contenido que necesites usando la barra de búsqueda o explorando por categorías. Cuando encuentres algo que te interese, haz clic en el botón "Descargar". Algunos materiales pueden requerir que estés registrado y hayas iniciado sesión.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="descarga">
+                    <div class="faq-question">
+                        <span>¿Hay límite de descargas?</span>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Los usuarios gratuitos pueden descargar hasta 10 materiales por día. Los usuarios premium tienen descargas ilimitadas. Este límite existe para garantizar un acceso equitativo a todos los estudiantes y mantener la estabilidad del sistema.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="descarga">
+                    <div class="faq-question">
+                        <span>¿Puedo ver el material antes de descargarlo?</span>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, la mayoría de los materiales tienen una opción de "Vista previa" que te permite ver las primeras páginas del documento antes de decidir descargarlo. Esto te ayuda a asegurarte de que el contenido es lo que necesitas.</p>
+                    </div>
+                </div>
+                
+                <!-- Premium Questions -->
+                <div class="faq-item" data-category="premium">
+                    <div class="faq-question">
+                        <span>¿Qué ventajas tiene la cuenta premium?</span>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Las cuentas premium disfrutan de descargas ilimitadas, acceso prioritario a nuevos materiales, almacenamiento aumentado para subir contenido, estadísticas detalladas de tus materiales y la posibilidad de contactar directamente a los colaboradores.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="premium">
+                    <div class="faq-question">
+                        <span>¿Cómo me hago premium?</span>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Puedes hacerte premium yendo a la sección "Mi Cuenta" y seleccionando la opción "Actualizar a Premium". Ofrecemos planes mensuales, semestrales y anuales con descuentos especiales para estudiantes.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="premium">
+                    <div class="faq-question">
+                        <span>¿Puedo cancelar mi suscripción premium en cualquier momento?</span>
+                        <div class="faq-toggle"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, puedes cancelar tu suscripción premium en cualquier momento desde la sección "Mi Cuenta". Tu suscripción permanecerá activa hasta el final del período pagado, y luego volverás a una cuenta gratuita con todas sus limitaciones.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Stats Section -->
+            <div class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">De preguntas respondidas</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Soporte disponible</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Preguntas en nuestra base</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">De usuarios satisfechos</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Card -->
+            <div class="contact-card">
+                <h3>¿No encontraste lo que buscabas?</h3>
+                <p>Si tienes una pregunta específica que no aparece en nuestra lista de preguntas frecuentes, no dudes en contactarnos. Nuestro equipo de soporte te responderá en menos de 24 horas.</p>
+                <button class="btn btn-primary">Contactar Soporte</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Intercambio Académico FISI</h3>
+                    <p>Plataforma para compartir material académico entre estudiantes de la Facultad de Ingeniería de Sistemas e Informática de la UNMSM.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Carreras</h3>
+                    <ul>
+                        <li><a href="#">Ingeniería de Software</a></li>
+                        <li><a href="#">Ingeniería de Sistemas</a></li>
+                        <li><a href="#">Ciencias de la Computación</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#">Material Reciente</a></li>
+                        <li><a href="#">Material Popular</a></li>
+                        <li><a href="#">Subir Material</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Ciudad Universitaria, UNMSM</li>
+                        <li><i class="fas fa-phone"></i> (01) 619-7000</li>
+                        <li><i class="fas fa-envelope"></i> contacto@fisi.edu.pe</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Intercambio Académico FISI - UNMSM. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+        
+        // Category filter functionality
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const category = button.getAttribute('data-category');
+                
+                // Remove active class from all buttons
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                // Filter FAQ items
+                faqItems.forEach(item => {
+                    const itemCategory = item.getAttribute('data-category');
+                    
+                    if (category === 'all' || category === itemCategory) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+        
+        // Search functionality
+        const searchInput = document.querySelector('.search-bar input');
+        const searchButton = document.querySelector('.search-bar button');
+        
+        function performSearch() {
+            const searchTerm = searchInput.value.toLowerCase();
+            
+            if (searchTerm.length < 2) {
+                // Show all items if search term is too short
+                faqItems.forEach(item => {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                    }, 10);
+                });
+                return;
+            }
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question span').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+                
+                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                    }, 10);
+                    
+                    // Auto-open matching items
+                    item.classList.add('active');
+                } else {
+                    item.style.opacity = '0';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 300);
+                    item.classList.remove('active');
+                }
+            });
+        }
+        
+        searchInput.addEventListener('keyup', performSearch);
+        searchButton.addEventListener('click', performSearch);
+        
+        // Contact button functionality
+        const contactButton = document.querySelector('.contact-card .btn');
+        
+        contactButton.addEventListener('click', () => {
+            alert('Redirigiendo al formulario de contacto...');
+            // In a real application, this would redirect to a contact page
+        });
+    </script>
+</body>
+</html>

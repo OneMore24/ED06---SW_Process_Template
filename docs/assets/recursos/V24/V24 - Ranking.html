@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contribuciones - FISI UNMSM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #8B0000; /* Granate UNMSM */
+            --secondary-color: #FFD700; /* Dorado UNMSM */
+            --accent-color: #328CC1;
+            --light-color: #F5F5F5;
+            --dark-color: #1D2731;
+            --software-color: #4E54C8;
+            --sistemas-color: #C83C4B;
+            --computacion-color: #3CAF5F;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(to right, var(--primary-color), #A52A2A);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+            position: relative;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 5px 0;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn {
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            outline: none;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        
+        .btn-outline:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+            font-weight: 600;
+        }
+        
+        .btn-primary:hover {
+            background-color: #e6c300;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .breadcrumb span {
+            color: #777;
+        }
+        
+        /* Hero Section */
+        .contributions-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 50px;
+            border-radius: 10px;
+        }
+        
+        .contributions-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contributions-hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .contributions-hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        /* Tabs Navigation */
+        .tabs-navigation {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .tab-btn {
+            padding: 12px 25px;
+            background: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tab-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .tab-btn:hover:not(.active) {
+            background: #f0f0f0;
+        }
+        
+        /* Leaderboard Section */
+        .leaderboard-section {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+        }
+        
+        .time-filter {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .time-filter select {
+            padding: 8px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .leaderboard {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .leaderboard-item {
+            display: grid;
+            grid-template-columns: 50px 1fr 100px 100px;
+            align-items: center;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f9f9f9;
+            transition: all 0.3s;
+        }
+        
+        .leaderboard-item:hover {
+            background: #f0f0f0;
+            transform: translateX(5px);
+        }
+        
+        .leaderboard-item.top-3 {
+            background: linear-gradient(to right, rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0.05));
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .rank {
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .rank-1 { color: #FFD700; }
+        .rank-2 { color: #C0C0C0; }
+        .rank-3 { color: #CD7F32; }
+        
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .user-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .user-details h3 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+        
+        .user-details p {
+            font-size: 0.8rem;
+            color: #777;
+        }
+        
+        .user-stats {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .stat-label {
+            font-size: 0.8rem;
+            color: #777;
+        }
+        
+        /* Featured Materials */
+        .materials-section {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+        }
+        
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .material-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .material-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .material-image {
+            height: 160px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-size: 2.5rem;
+        }
+        
+        .material-content {
+            padding: 20px;
+        }
+        
+        .material-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+        
+        .material-info {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        .material-info div {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .rating {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        /* Badges Section */
+        .badges-section {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+        }
+        
+        .badges-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .badge-card {
+            background: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .badge-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .badge-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(45deg, var(--secondary-color), #ffea80);
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-color);
+            font-size: 1.8rem;
+        }
+        
+        .badge-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+        
+        .badge-desc {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .badge-progress {
+            height: 6px;
+            background: #e0e0e0;
+            border-radius: 3px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: var(--primary-color);
+            border-radius: 3px;
+        }
+        
+        .progress-text {
+            font-size: 0.8rem;
+            color: #777;
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(to right, var(--primary-color), #A52A2A);
+            color: white;
+            padding: 60px 0;
+            margin: 50px 0;
+            border-radius: 10px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(to right, var(--dark-color), #2C3E50);
+            color: white;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 5px 10px;
+            }
+            
+            .auth-buttons {
+                margin-top: 15px;
+            }
+            
+            .contributions-hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .contributions-hero p {
+                font-size: 1rem;
+            }
+            
+            .leaderboard-item {
+                grid-template-columns: 40px 1fr 80px;
+                grid-template-rows: auto auto;
+            }
+            
+            .user-stats {
+                grid-column: 2 / 4;
+                text-align: left;
+                display: flex;
+                gap: 15px;
+                margin-top: 10px;
+            }
+            
+            .materials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .badges-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .tabs-navigation {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .section-header {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDUwIDUwIj48cmVjdCB4PSIxMCIgeT0iMTAiIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgZmlsbD0id2hpdGUiIHJ4PSIzIiByeT0iMyIvPjx0ZXh0IHg=" alt="Logo FISI UNMSM">
+                    <h1>Intercambio Académico FISI</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#carreras">Carreras</a></li>
+                        <li><a href="busqueda.html">Explorar</a></li>
+                        <li><a href="subir.html">Subir</a></li>
+                        <li><a href="contribuciones.html" class="active">Contribuciones</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons">
+                    <button class="btn btn-outline">Iniciar Sesión</button>
+                    <button class="btn btn-primary">Registrarse</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> > <span>Contribuciones y Reconocimientos</span>
+        </div>
+        
+        <!-- Hero Section -->
+        <div class="contributions-hero">
+            <div class="contributions-hero-content">
+                <h2>Contribuciones y Reconocimientos</h2>
+                <p>Descubre a los usuarios más activos, los materiales mejor valorados y desbloquea logros en nuestra comunidad académica</p>
+            </div>
+        </div>
+        
+        <!-- Tabs Navigation -->
+        <div class="tabs-navigation">
+            <button class="tab-btn active" data-tab="leaderboard">Ranking de Usuarios</button>
+            <button class="tab-btn" data-tab="materials">Materiales Destacados</button>
+            <button class="tab-btn" data-tab="badges">Logros e Insignias</button>
+        </div>
+        
+        <!-- Leaderboard Section -->
+        <div class="leaderboard-section" id="leaderboard">
+            <div class="section-header">
+                <h2 class="section-title">Ranking de Contribuidores</h2>
+                <div class="time-filter">
+                    <span>Filtrar por:</span>
+                    <select>
+                        <option>Este mes</option>
+                        <option>Este semestre</option>
+                        <option>Este año</option>
+                        <option>Todos los tiempos</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="leaderboard">
+                <!-- User 1 -->
+                <div class="leaderboard-item top-3">
+                    <div class="rank rank-1">1</div>
+                    <div class="user-info">
+                        <div class="user-avatar">JP</div>
+                        <div class="user-details">
+                            <h3>Juan Pérez</h3>
+                            <p>Ingeniería de Software • 8vo Semestre</p>
+                        </div>
+                    </div>
+                    <div class="user-stats">
+                        <div class="stat-value">24</div>
+                        <div class="stat-label">Materiales</div>
+                    </div>
+                    <div class="user-stats">
+                        <div class="stat-value">4.7</div>
+                        <div class="stat-label">Rating</div>
+                    </div>
+                </div>
+                
+                <!-- User 2 -->
+                <div class="leaderboard-item top-3">
+                    <div class="rank rank-2">2</div>
+                    <div class="user-info">
+                        <div class="user-avatar">ML</div>
+                        <div class="user-details">
+                            <h3>María López</h3>
+                            <p>Ingeniería de Sistemas • 6to Semestre</p>
+                        </div>
+                    </div>
+                    <div class="user-stats">
+                        <div class="stat-value">18</div>
+                        <div class="stat-label">Materiales</div>
+                    </div>
+                    <div class="user-stats">
+                        <div class="stat-value">4.9</div>
+                        <div class="stat-label">Rating</div>
+                    </div>
+                </div>
+                
+                <!-- User 3 -->
+                <div class="leaderboard-item top-3">
+                    <div class="rank rank-3">3</div>
+                    <div class="user-info">
+                        <div class="user-avatar">CR</div>
+                        <div class="user-details">
+                            <h3>Carlos Rodríguez</h3>
+                            <p>Ciencias de la Computación • 7mo Semestre</p>
+                        </div>
+                    </div>
+                    <div class="user-stats">
+                        <div class="stat-value">16</div>
+                        <div class="stat-label">Materiales</div>
+                    </div>
+                    <div class="user-stats">
+                        <div class="stat-value">4.5</div>
+                        <div class="stat-label">Rating</div>
+                    </div>
+                </div>
+                
+                <!-- User 4 -->
+                <div class="leaderboard-item">
+                    <div class="rank">4</div>
+                    <div class="user-info">
+                        <div class="user-avatar">AG</div>
+                        <div class="user-details">
+                            <h3>Ana García</h3>
+                            <p>Ingeniería de Software • 5to Semestre</p>
+                        </div>
+                    </div>
+                    <div class="user-stats">
+                        <div class="stat-value">14</div>
+                        <div class="stat-label">Materiales</div>
+                    </div>
+                    <div class="user-stats">
+                        <div class="stat-value">4.3</div>
+                        <div class="stat-label">Rating</div>
+                    </div>
+                </div>
+                
+                <!-- User 5 -->
+                <div class="leaderboard-item">
+                    <div class="rank">5</div>
+                    <div class="user-info">
+                        <div class="user-avatar">LM</div>
+                        <div class="user-details">
+                            <h3>Luis Martínez</h3>
+                            <p>Ingeniería de Sistemas • 9no Semestre</p>
+                        </div>
+                    </div>
+                    <div class="user-stats">
+                        <div class="stat-value">12</div>
+                        <div class="stat-label">Materiales</div>
+                    </div>
+                    <div class="user-stats">
+                        <div class="stat-value">4.6</div>
+                        <div class="stat-label">Rating</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Featured Materials Section -->
+        <div class="materials-section" id="materials">
+            <div class="section-header">
+                <h2 class="section-title">Materiales Destacados</h2>
+                <div class="time-filter">
+                    <span>Ordenar por:</span>
+                    <select>
+                        <option>Mejor calificados</option>
+                        <option>Más descargados</option>
+                        <option>Más recientes</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="materials-grid">
+                <!-- Material 1 -->
+                <div class="material-card">
+                    <div class="material-image">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="material-content">
+                        <h3 class="material-title">Resumen Completo - Bases de Datos</h3>
+                        <div class="material-info">
+                            <div><i class="fas fa-graduation-cap"></i> Ing. de Software</div>
+                            <div><i class="fas fa-book"></i> Bases de Datos</div>
+                            <div><i class="fas fa-calendar"></i> 4° Semestre</div>
+                            <div><i class="fas fa-user"></i> Juan Pérez</div>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(24)</span>
+                        </div>
+                        <div class="material-actions">
+                            <button class="btn btn-primary">Descargar</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Material 2 -->
+                <div class="material-card">
+                    <div class="material-image">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <div class="material-content">
+                        <h3 class="material-title">Guía Completa - Programación I</h3>
+                        <div class="material-info">
+                            <div><i class="fas fa-graduation-cap"></i> Ing. de Sistemas</div>
+                            <div><i class="fas fa-book"></i> Programación I</div>
+                            <div><i class="fas fa-calendar"></i> 2° Semestre</div>
+                            <div><i class="fas fa-user"></i> María López</div>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(18)</span>
+                        </div>
+                        <div class="material-actions">
+                            <button class="btn btn-primary">Descargar</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Material 3 -->
+                <div class="material-card">
+                    <div class="material-image">
+                        <i class="fas fa-file-code"></i>
+                    </div>
+                    <div class="material-content">
+                        <h3 class="material-title">Ejercicios Resueltos - Algoritmos</h3>
+                        <div class="material-info">
+                            <div><i class="fas fa-graduation-cap"></i> Ciencias de la Computación</div>
+                            <div><i class="fas fa-book"></i> Algoritmos</div>
+                            <div><i class="fas fa-calendar"></i> 3° Semestre</div>
+                            <div><i class="fas fa-user"></i> Carlos Rodríguez</div>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(12)</span>
+                        </div>
+                        <div class="material-actions">
+                            <button class="btn btn-primary">Descargar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">1,200+</div>
+                    <div class="stat-label">Materiales Académicos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">3,500+</div>
+                    <div class="stat-label">Usuarios Registrados</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15,000+</div>
+                    <div class="stat-label">Descargas Realizadas</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Satisfacción de Usuarios</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Badges Section -->
+        <div class="badges-section" id="badges">
+            <div class="section-header">
+                <h2 class="section-title">Logros e Insignias</h2>
+                <p>Desbloquea insignias al completar diferentes actividades en la plataforma</p>
+            </div>
+            
+            <div class="badges-container">
+                <!-- Badge 1 -->
+                <div class="badge-card">
+                    <div class="badge-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="badge-title">Contribuidor Novato</h3>
+                    <p class="badge-desc">Sube tu primer material académico</p>
+                    <div class="badge-progress">
+                        <div class="progress-bar" style="width: 100%;"></div>
+                    </div>
+                    <p class="progress-text">¡Completado!</p>
+                </div>
+                
+                <!-- Badge 2 -->
+                <div class="badge-card">
+                    <div class="badge-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="badge-title">Material Popular</h3>
+                    <p class="badge-desc">Consigue 100+ descargas en un material</p>
+                    <div class="badge-progress">
+                        <div class="progress-bar" style="width: 75%;"></div>
+                    </div>
+                    <p class="progress-text">75/100 descargas</p>
+                </div>
+                
+                <!-- Badge 3 -->
+                <div class="badge-card">
+                    <div class="badge-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="badge-title">Material Apreciado</h3>
+                    <p class="badge-desc">Obtén una calificación de 4.5+ estrellas</p>
+                    <div class="badge-progress">
+                        <div class="progress-bar" style="width: 100%;"></div>
+                    </div>
+                    <p class="progress-text">¡Completado!</p>
+                </div>
+                
+                <!-- Badge 4 -->
+                <div class="badge-card">
+                    <div class="badge-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="badge-title">Influencer Académico</h3>
+                    <p class="badge-desc">Consigue 100 seguidores en tu perfil</p>
+                    <div class="badge-progress">
+                        <div class="progress-bar" style="width: 30%;"></div>
+                    </div>
+                    <p class="progress-text">30/100 seguidores</p>
+                </div>
+                
+                <!-- Badge 5 -->
+                <div class="badge-card">
+                    <div class="badge-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="badge-title">Especialista en Contenido</h3>
+                    <p class="badge-desc">Sube materiales en 5 categorías diferentes</p>
+                    <div class="badge-progress">
+                        <div class="progress-bar" style="width: 60%;"></div>
+                    </div>
+                    <p class="progress-text">3/5 categorías</p>
+                </div>
+                
+                <!-- Badge 6 -->
+                <div class="badge-card">
+                    <div class="badge-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="badge-title">Contribuidor Élite</h3>
+                    <p class="badge-desc">Sube 20+ materiales académicos</p>
+                    <div class="badge-progress">
+                        <div class="progress-bar" style="width: 80%;"></div>
+                    </div>
+                    <p class="progress-text">16/20 materiales</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Intercambio Académico FISI</h3>
+                    <p>Plataforma para compartir material académico entre estudiantes de la Facultad de Ingeniería de Sistemas e Informática de la UNMSM.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Carreras</h3>
+                    <ul>
+                        <li><a href="#">Ingeniería de Software</a></li>
+                        <li><a href="#">Ingeniería de Sistemas</a></li>
+                        <li><a href="#">Ciencias de la Computación</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#">Material Reciente</a></li>
+                        <li><a href="#">Material Popular</a></li>
+                        <li><a href="#">Subir Material</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Ciudad Universitaria, UNMSM</li>
+                        <li><i class="fas fa-phone"></i> (01) 619-7000</li>
+                        <li><i class="fas fa-envelope"></i> contacto@fisi.edu.pe</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Intercambio Académico FISI - UNMSM. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab functionality
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const sections = document.querySelectorAll('.leaderboard-section, .materials-section, .badges-section');
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetTab = button.getAttribute('data-tab');
+                
+                // Remove active class from all buttons
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                // Hide all sections
+                sections.forEach(section => {
+                    section.style.display = 'none';
+                });
+                
+                // Show target section
+                document.getElementById(targetTab).style.display = 'block';
+            });
+        });
+        
+        // Initialize with leaderboard visible
+        document.getElementById('leaderboard').style.display = 'block';
+        document.getElementById('materials').style.display = 'none';
+        document.getElementById('badges').style.display = 'none';
+        
+        // Time filter functionality
+        const timeFilter = document.querySelector('.time-filter select');
+        timeFilter.addEventListener('change', function() {
+            // In a real application, this would filter the leaderboard data
+            alert(`Filtrando ranking por: ${this.value}`);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario - FISI UNMSM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #8B0000; /* Granate UNMSM */
+            --secondary-color: #FFD700; /* Dorado UNMSM */
+            --accent-color: #328CC1;
+            --light-color: #F5F5F5;
+            --dark-color: #1D2731;
+            --software-color: #4E54C8;
+            --sistemas-color: #C83C4B;
+            --computacion-color: #3CAF5F;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(to right, var(--primary-color), #A52A2A);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+            position: relative;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 5px 0;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn {
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            outline: none;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        
+        .btn-outline:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+            font-weight: 600;
+        }
+        
+        .btn-primary:hover {
+            background-color: #e6c300;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .breadcrumb span {
+            color: #777;
+        }
+        
+        /* Profile Section */
+        .profile-section {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        /* Profile Sidebar */
+        .profile-sidebar {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            height: fit-content;
+            position: sticky;
+            top: 90px;
+        }
+        
+        .profile-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: 600;
+            position: relative;
+        }
+        
+        .avatar-edit {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            width: 35px;
+            height: 35px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-color);
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .profile-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--dark-color);
+        }
+        
+        .profile-career {
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .profile-semester {
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        .profile-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .stat-card {
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.8rem;
+            color: #777;
+        }
+        
+        .profile-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        /* Profile Main */
+        .profile-main {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .profile-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+        }
+        
+        .tab-nav {
+            display: flex;
+            gap: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            margin-bottom: 25px;
+        }
+        
+        .tab-link {
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: 500;
+            color: #777;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+        }
+        
+        .tab-link.active {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        /* Materials Grid */
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .material-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .material-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .material-image {
+            height: 140px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-size: 2.5rem;
+        }
+        
+        .material-content {
+            padding: 15px;
+        }
+        
+        .material-title {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+        
+        .material-info {
+            color: #666;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .material-info div {
+            margin-bottom: 3px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .rating {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .material-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        /* Form Styles */
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: var(--dark-color);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+        
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        /* Achievements */
+        .badges-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 20px;
+        }
+        
+        .badge-item {
+            text-align: center;
+        }
+        
+        .badge-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(45deg, var(--secondary-color), #ffea80);
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-color);
+            font-size: 1.5rem;
+        }
+        
+        .badge-name {
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .badge-desc {
+            font-size: 0.8rem;
+            color: #777;
+        }
+        
+        /* Activity List */
+        .activity-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .activity-item {
+            display: flex;
+            gap: 15px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+        
+        .activity-icon {
+            width: 40px;
+            height: 40px;
+            background: #f0f0f0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+        }
+        
+        .activity-content {
+            flex: 1;
+        }
+        
+        .activity-text {
+            margin-bottom: 5px;
+        }
+        
+        .activity-date {
+            font-size: 0.8rem;
+            color: #777;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(to right, var(--dark-color), #2C3E50);
+            color: white;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .profile-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .profile-sidebar {
+                position: static;
+            }
+            
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 5px 10px;
+            }
+            
+            .auth-buttons {
+                margin-top: 15px;
+            }
+            
+            .materials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tab-nav {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDUwIDUwIj48cmVjdCB4PSIxMCIgeT0iMTAiIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgZmlsbD0id2hpdGUiIHJ4PSIzIiByeT0iMyIvPjx0ZXh0IHg9IjI1IiB5PSIyOCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjOEIwMDAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXdlaWdodD0iYm9sZCI+RklTSTwvdGV4dD48L3N2Zz4=" alt="Logo FISI UNMSM">
+                    <h1>Intercambio Académico FISI</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#carreras">Carreras</a></li>
+                        <li><a href="index.html#materiales">Materiales</a></li>
+                        <li><a href="#subir">Subir</a></li>
+                        <li><a href="#acerca">Acerca de</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons">
+                    <button class="btn btn-outline">Cerrar Sesión</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> > <span>Mi Perfil</span>
+        </div>
+        
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <!-- Profile Sidebar -->
+            <div class="profile-sidebar">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        JP
+                        <div class="avatar-edit">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                    </div>
+                    <h2 class="profile-name">Juan Pérez</h2>
+                    <p class="profile-career">Ingeniería de Software</p>
+                    <p class="profile-semester">8vo Semestre</p>
+                </div>
+                
+                <div class="profile-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">24</div>
+                        <div class="stat-label">Materiales</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">4.7</div>
+                        <div class="stat-label">Rating</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">1.2K</div>
+                        <div class="stat-label">Descargas</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">187</div>
+                        <div class="stat-label">Seguidores</div>
+                    </div>
+                </div>
+                
+                <div class="profile-actions">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Subir Nuevo Material
+                    </button>
+                    <button class="btn btn-outline" style="color: var(--dark-color); border-color: #ddd;">
+                        <i class="fas fa-edit"></i> Editar Perfil
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Profile Main Content -->
+            <div class="profile-main">
+                <!-- Materials Card -->
+                <div class="profile-card">
+                    <div class="card-header">
+                        <h2 class="card-title">Mis Materiales</h2>
+                        <div class="filter-dropdown">
+                            <select>
+                                <option>Más recientes</option>
+                                <option>Más populares</option>
+                                <option>Mejor calificados</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-nav">
+                        <div class="tab-link active" data-tab="uploaded">Subidos</div>
+                        <div class="tab-link" data-tab="saved">Guardados</div>
+                        <div class="tab-link" data-tab="downloaded">Descargados</div>
+                    </div>
+                    
+                    <div class="tab-content active" id="uploaded">
+                        <div class="materials-grid">
+                            <!-- Material 1 -->
+                            <div class="material-card">
+                                <div class="material-image">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <div class="material-content">
+                                    <h3 class="material-title">Resumen - Bases de Datos</h3>
+                                    <div class="material-info">
+                                        <div><i class="fas fa-book"></i> Bases de Datos</div>
+                                        <div><i class="fas fa-calendar"></i> 4° Semestre</div>
+                                        <div><i class="fas fa-download"></i> 124 descargas</div>
+                                    </div>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <span>(24)</span>
+                                    </div>
+                                    <div class="material-actions">
+                                        <button class="btn btn-outline" style="color: var(--dark-color); border-color: var(--dark-color); font-size: 0.8rem; padding: 5px 10px;">Editar</button>
+                                        <button class="btn btn-primary" style="font-size: 0.8rem; padding: 5px 10px;">Ver Detalles</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Material 2 -->
+                            <div class="material-card">
+                                <div class="material-image">
+                                    <i class="fas fa-file-pdf"></i>
+                                </div>
+                                <div class="material-content">
+                                    <h3 class="material-title">Guía Completa - Programación I</h3>
+                                    <div class="material-info">
+                                        <div><i class="fas fa-book"></i> Programación I</div>
+                                        <div><i class="fas fa-calendar"></i> 2° Semestre</div>
+                                        <div><i class="fas fa-download"></i> 98 descargas</div>
+                                    </div>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>(18)</span>
+                                    </div>
+                                    <div class="material-actions">
+                                        <button class="btn btn-outline" style="color: var(--dark-color); border-color: var(--dark-color); font-size: 0.8rem; padding: 5px 10px;">Editar</button>
+                                        <button class="btn btn-primary" style="font-size: 0.8rem; padding: 5px 10px;">Ver Detalles</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Material 3 -->
+                            <div class="material-card">
+                                <div class="material-image">
+                                    <i class="fas fa-file-code"></i>
+                                </div>
+                                <div class="material-content">
+                                    <h3 class="material-title">Ejercicios Resueltos - Algoritmos</h3>
+                                    <div class="material-info">
+                                        <div><i class="fas fa-book"></i> Algoritmos</div>
+                                        <div><i class="fas fa-calendar"></i> 3° Semestre</div>
+                                        <div><i class="fas fa-download"></i> 76 descargas</div>
+                                    </div>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <span>(12)</span>
+                                    </div>
+                                    <div class="material-actions">
+                                        <button class="btn btn-outline" style="color: var(--dark-color); border-color: var(--dark-color); font-size: 0.8rem; padding: 5px 10px;">Editar</button>
+                                        <button class="btn btn-primary" style="font-size: 0.8rem; padding: 5px 10px;">Ver Detalles</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="saved">
+                        <p style="text-align: center; padding: 40px; color: #777;">
+                            No tienes materiales guardados todavía. 
+                            <br>Haz clic en el icono de guardar en cualquier material para agregarlo aquí.
+                        </p>
+                    </div>
+                    
+                    <div class="tab-content" id="downloaded">
+                        <p style="text-align: center; padding: 40px; color: #777;">
+                            Tus materiales descargados aparecerán aquí.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Achievements Card -->
+                <div class="profile-card">
+                    <div class="card-header">
+                        <h2 class="card-title">Logros y Reconocimientos</h2>
+                    </div>
+                    
+                    <div class="badges-container">
+                        <div class="badge-item">
+                            <div class="badge-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="badge-name">Contribuidor</div>
+                            <div class="badge-desc">Primer material subido</div>
+                        </div>
+                        
+                        <div class="badge-item">
+                            <div class="badge-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="badge-name">Popular</div>
+                            <div class="badge-desc">100+ descargas</div>
+                        </div>
+                        
+                        <div class="badge-item">
+                            <div class="badge-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="badge-name">Apreciado</div>
+                            <div class="badge-desc">Material con 4.5+ rating</div>
+                        </div>
+                        
+                        <div class="badge-item">
+                            <div class="badge-icon" style="background: #e0e0e0; color: #999;">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="badge-name">Influencer</div>
+                            <div class="badge-desc">Consigue 100 seguidores</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Activity Card -->
+                <div class="profile-card">
+                    <div class="card-header">
+                        <h2 class="card-title">Actividad Reciente</h2>
+                    </div>
+                    
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-upload"></i>
+                            </div>
+                            <div class="activity-content">
+                                <div class="activity-text">Subiste un nuevo material: <strong>Resumen - Bases de Datos</strong></div>
+                                <div class="activity-date">Hace 2 días</div>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-download"></i>
+                            </div>
+                            <div class="activity-content">
+                                <div class="activity-text">Descargaste <strong>Guía de Redes y Comunicaciones</strong></div>
+                                <div class="activity-date">Hace 4 días</div>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-comment"></i>
+                            </div>
+                            <div class="activity-content">
+                                <div class="activity-text">Comentaste en <strong>Ejercicios de Álgebra Lineal</strong></div>
+                                <div class="activity-date">Hace 1 semana</div>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="activity-content">
+                                <div class="activity-text">Calificaste <strong>Apuntes de Ingeniería de Software</strong> con 5 estrellas</div>
+                                <div class="activity-date">Hace 2 semanas</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Intercambio Académico FISI</h3>
+                    <p>Plataforma para compartir material académico entre estudiantes de la Facultad de Ingeniería de Sistemas e Informática de la UNMSM.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Carreras</h3>
+                    <ul>
+                        <li><a href="#">Ingeniería de Software</a></li>
+                        <li><a href="#">Ingeniería de Sistemas</a></li>
+                        <li><a href="#">Ciencias de la Computación</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#">Material Reciente</a></li>
+                        <li><a href="#">Material Popular</a></li>
+                        <li><a href="#">Subir Material</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Ciudad Universitaria, UNMSM</li>
+                        <li><i class="fas fa-phone"></i> (01) 619-7000</li>
+                        <li><i class="fas fa-envelope"></i> contacto@fisi.edu.pe</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Intercambio Académico FISI - UNMSM. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab functionality
+        const tabLinks = document.querySelectorAll('.tab-link');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                const tabId = link.getAttribute('data-tab');
+                
+                // Remove active class from all tabs
+                tabLinks.forEach(l => l.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                link.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Avatar edit functionality
+        const avatarEdit = document.querySelector('.avatar-edit');
+        avatarEdit.addEventListener('click', () => {
+            alert('Funcionalidad para cambiar foto de perfil en desarrollo');
+        });
+        
+        // Edit profile button
+        const editProfileBtn = document.querySelector('.profile-actions .btn-outline');
+        editProfileBtn.addEventListener('click', () => {
+            alert('Funcionalidad de edición de perfil en desarrollo');
+        });
+        
+        // Upload material button
+        const uploadBtn = document.querySelector('.profile-actions .btn-primary');
+        uploadBtn.addEventListener('click', () => {
+            alert('Funcionalidad para subir material en desarrollo');
+        });
+    </script>
+</body>
+</html>

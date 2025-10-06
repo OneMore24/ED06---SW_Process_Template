@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Políticas de Privacidad - FISI UNMSM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #8B0000; /* Granate UNMSM */
+            --secondary-color: #FFD700; /* Dorado UNMSM */
+            --accent-color: #328CC1;
+            --light-color: #F5F5F5;
+            --dark-color: #1D2731;
+            --software-color: #4E54C8;
+            --sistemas-color: #C83C4B;
+            --computacion-color: #3CAF5F;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(to right, var(--primary-color), #A52A2A);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+            position: relative;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 5px 0;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .btn {
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            outline: none;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+        
+        .btn-outline:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+            font-weight: 600;
+        }
+        
+        .btn-primary:hover {
+            background-color: #e6c300;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .breadcrumb span {
+            color: #777;
+        }
+        
+        /* Hero Section */
+        .policy-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 50px;
+            border-radius: 10px;
+        }
+        
+        .policy-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .policy-hero h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .policy-hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        /* Policy Navigation */
+        .policy-nav {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+            position: sticky;
+            top: 90px;
+            z-index: 100;
+        }
+        
+        .policy-nav ul {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .policy-nav li a {
+            padding: 10px 20px;
+            background: #f5f5f5;
+            border-radius: 30px;
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .policy-nav li a:hover,
+        .policy-nav li a.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        /* Policy Content */
+        .policy-content {
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 50px;
+        }
+        
+        .policy-section {
+            margin-bottom: 40px;
+        }
+        
+        .policy-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .policy-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .policy-section h3 {
+            font-size: 1.4rem;
+            margin: 25px 0 15px;
+            color: var(--dark-color);
+        }
+        
+        .policy-section p {
+            margin-bottom: 15px;
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        .policy-section ul, .policy-section ol {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        
+        .policy-section li {
+            margin-bottom: 10px;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .highlight-box {
+            background: #f9f9f9;
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .update-info {
+            background: #fff9e6;
+            border: 1px solid #ffd700;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        .update-info h4 {
+            color: var(--dark-color);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .update-info h4 i {
+            color: var(--secondary-color);
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(to right, var(--dark-color), #2C3E50);
+            color: white;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 5px 10px;
+            }
+            
+            .auth-buttons {
+                margin-top: 15px;
+            }
+            
+            .policy-hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .policy-hero p {
+                font-size: 1rem;
+            }
+            
+            .policy-nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .policy-content {
+                padding: 25px;
+            }
+            
+            .policy-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .policy-section h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDUwIDUwIj48cmVjdCB4PSIxMCIgeT0iMTAiIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgZmlsbD0id2hpdGUiIHJ4PSIzIiByeT0iMyIvPjx0ZXh0IHg=" alt="Logo FISI UNMSM">
+                    <h1>Intercambio Académico FISI</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#carreras">Carreras</a></li>
+                        <li><a href="busqueda.html">Explorar</a></li>
+                        <li><a href="subir.html">Subir</a></li>
+                        <li><a href="politicas.html" class="active">Políticas</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons">
+                    <button class="btn btn-outline">Iniciar Sesión</button>
+                    <button class="btn btn-primary">Registrarse</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> > <span>Políticas de Privacidad y Términos de Uso</span>
+        </div>
+        
+        <!-- Hero Section -->
+        <div class="policy-hero">
+            <div class="policy-hero-content">
+                <h2>Políticas de Privacidad y Términos de Uso</h2>
+                <p>Conoce cómo protegemos tu información y las condiciones de uso de nuestra plataforma</p>
+            </div>
+        </div>
+        
+        <!-- Policy Navigation -->
+        <div class="policy-nav">
+            <ul>
+                <li><a href="#privacidad" class="active">Política de Privacidad</a></li>
+                <li><a href="#terminos">Términos de Uso</a></li>
+                <li><a href="#cookies">Política de Cookies</a></li>
+                <li><a href="#derechos">Tus Derechos</a></li>
+                <li><a href="#contacto">Contacto Legal</a></li>
+            </ul>
+        </div>
+        
+        <!-- Policy Content -->
+        <div class="policy-content">
+            <!-- Privacy Policy -->
+            <div class="policy-section" id="privacidad">
+                <h2>Política de Privacidad</h2>
+                
+                <div class="update-info">
+                    <h4><i class="fas fa-info-circle"></i> Última actualización: 15 de Noviembre, 2023</h4>
+                    <p>Esta Política de Privacidad describe cómo Intercambio Académico FISI recopila, utiliza y comparte tu información personal cuando utilizas nuestra plataforma.</p>
+                </div>
+                
+                <h3>1. Información que Recopilamos</h3>
+                <p>Recopilamos información que nos proporcionas directamente cuando:</p>
+                <ul>
+                    <li>Creas una cuenta en nuestra plataforma</li>
+                    <li>Subes material académico</li>
+                    <li>Completas formularios de contacto o soporte</li>
+                    <li>Participas en encuestas o actividades promocionales</li>
+                    <li>Te comunicas con nosotros por cualquier medio</li>
+                </ul>
+                
+                <h3>2. Uso de la Información</h3>
+                <p>Utilizamos la información recopilada para:</p>
+                <ul>
+                    <li>Proveer, mantener y mejorar nuestros servicios</li>
+                    <li>Personalizar tu experiencia en la plataforma</li>
+                    <li>Comunicarnos contigo sobre actualizaciones y novedades</li>
+                    <li>Responder a tus consultas y solicitudes de soporte</li>
+                    <li>Detectar y prevenir actividades fraudulentas</li>
+                    <li>Cumplir con obligaciones legales y regulatorias</li>
+                </ul>
+                
+                <h3>3. Compartición de Información</h3>
+                <p>No vendemos ni alquilamos tu información personal a terceros. Podemos compartir información en las siguientes circunstancias:</p>
+                <ul>
+                    <li>Con proveedores de servicios que nos ayudan a operar nuestra plataforma</li>
+                    <li>Cuando sea necesario por requerimiento legal o para proteger nuestros derechos</li>
+                    <li>En caso de fusión, adquisición o venta de activos, con previa notificación</li>
+                    <li>Con tu consentimiento explícito para fines específicos</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p><strong>Nota importante:</strong> La información académica que subas a la plataforma (apuntes, resúmenes, guías) será visible para otros usuarios según la configuración de privacidad que elijas, pero nunca compartiremos tu información personal de contacto sin tu consentimiento explícito.</p>
+                </div>
+            </div>
+            
+            <!-- Terms of Service -->
+            <div class="policy-section" id="terminos">
+                <h2>Términos de Uso</h2>
+                
+                <h3>1. Aceptación de los Términos</h3>
+                <p>Al acceder y utilizar Intercambio Académico FISI, aceptas cumplir con estos Términos de Uso y todas las leyes y regulaciones aplicables.</p>
+                
+                <h3>2. Cuenta de Usuario</h3>
+                <p>Para utilizar ciertas funciones de la plataforma, deberás crear una cuenta. Eres responsable de:</p>
+                <ul>
+                    <li>Proporcionar información precisa y completa</li>
+                    <li>Mantener la confidencialidad de tu contraseña</li>
+                    <li>Toda actividad que ocurra bajo tu cuenta</li>
+                    <li>Notificarnos inmediatamente任何 uso no autorizado de tu cuenta</li>
+                </ul>
+                
+                <h3>3. Contenido del Usuario</h3>
+                <p>Al subir contenido a nuestra plataforma, declaras y garantizas que:</p>
+                <ul>
+                    <li>Eres el creador y propietario del material o tienes los derechos necesarios para compartirlo</li>
+                    <li>El contenido no infringe derechos de autor, marcas registradas u otros derechos de propiedad intelectual</li>
+                    <li>El contenido no es ilegal, difamatorio, obsceno o inapropiado</li>
+                    <li>El contenido no contiene información personal sensible sin consentimiento</li>
+                </ul>
+                
+                <h3>4. Conducta del Usuario</h3>
+                <p>Al utilizar nuestra plataforma, te comprometes a:</p>
+                <ul>
+                    <li>Utilizar la plataforma solo para fines legales y académicos</li>
+                    <li>No realizar actividades que puedan dañar, sobrecargar o perjudicar la plataforma</li>
+                    <li>No intentar acceder a áreas restringidas de la plataforma</li>
+                    <li>No utilizar bots, spiders o otros métodos automatizados para acceder a la plataforma</li>
+                    <li>Respetar los derechos de otros usuarios y no acosar, intimidar o amenazar a otros</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p><strong>Propiedad Intelectual:</strong> Los materiales académicos compartidos en la plataforma pueden estar sujetos a derechos de autor. Es responsabilidad del usuario asegurarse de que tiene derecho a compartir dicho material. Intercambio Académico FISI actúa como plataforma de intercambio y no se hace responsable de infracciones de derechos de autor por parte de los usuarios.</p>
+                </div>
+            </div>
+            
+            <!-- Cookies Policy -->
+            <div class="policy-section" id="cookies">
+                <h2>Política de Cookies</h2>
+                
+                <h3>1. ¿Qué son las Cookies?</h3>
+                <p>Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitas nuestro sitio web. Nos ayudan a proporcionarte una mejor experiencia de usuario y a entender cómo interactúas con nuestra plataforma.</p>
+                
+                <h3>2. Tipos de Cookies que Utilizamos</h3>
+                <ul>
+                    <li><strong>Cookies esenciales:</strong> Necesarias para el funcionamiento básico de la plataforma.</li>
+                    <li><strong>Cookies de funcionalidad:</strong> Permiten recordar tus preferencias y elecciones.</li>
+                    <li><strong>Cookies analíticas:</strong> Nos ayudan a entender cómo los usuarios interactúan con nuestra plataforma.</li>
+                    <li><strong>Cookies de rendimiento:</strong> Recopilan información sobre el uso de la plataforma para mejorar su funcionamiento.</li>
+                </ul>
+                
+                <h3>3. Gestión de Cookies</h3>
+                <p>Puedes gestionar tus preferencias de cookies a través de la configuración de tu navegador. Ten en cuenta que deshabilitar ciertas cookies puede afectar la funcionalidad de nuestra plataforma.</p>
+            </div>
+            
+            <!-- User Rights -->
+            <div class="policy-section" id="derechos">
+                <h2>Tus Derechos de Privacidad</h2>
+                
+                <h3>1. Acceso y Rectificación</h3>
+                <p>Tienes derecho a acceder a la información personal que tenemos sobre ti y a solicitar la rectificación de cualquier dato inexacto.</p>
+                
+                <h3>2. Eliminación de Datos</h3>
+                <p>Puedes solicitar la eliminación de tu información personal, sujeto a ciertas obligaciones legales que podamos tener para retener ciertos datos.</p>
+                
+                <h3>3. Limitación del Procesamiento</h3>
+                <p>En ciertas circunstancias, puedes tener derecho a limitar el modo en que utilizamos tu información personal.</p>
+                
+                <h3>4. Portabilidad de Datos</h3>
+                <p>Tienes derecho a recibir la información personal que nos hayas proporcionado en un formato estructurado y comúnmente utilizado.</p>
+                
+                <h3>5. Oposición al Procesamiento</h3>
+                <p>Puedes oponerte al procesamiento de tu información personal para fines de marketing directo en cualquier momento.</p>
+                
+                <div class="highlight-box">
+                    <p>Para ejercer cualquiera de estos derechos, por favor contáctanos a través de nuestro <a href="contacto.html" style="color: var(--primary-color);">formulario de contacto</a> o envíanos un correo a <a href="mailto:privacidad@intercambiofisi.edu.pe" style="color: var(--primary-color);">privacidad@intercambiofisi.edu.pe</a>.</p>
+                </div>
+            </div>
+            
+            <!-- Legal Contact -->
+            <div class="policy-section" id="contacto">
+                <h2>Contacto Legal</h2>
+                
+                <p>Si tienes preguntas, inquietudes o comentarios sobre estas Políticas de Privacidad y Términos de Uso, por favor contáctanos:</p>
+                
+                <ul>
+                    <li><strong>Correo electrónico:</strong> <a href="mailto:legal@intercambiofisi.edu.pe" style="color: var(--primary-color);">legal@intercambiofisi.edu.pe</a></li>
+                    <li><strong>Dirección postal:</strong> Ciudad Universitaria de la UNMSM, Av. Germán Amézaga s/n, Lima 15081</li>
+                    <li><strong>Teléfono:</strong> (01) 619-7000 anexo 3510</li>
+                </ul>
+                
+                <div class="update-info">
+                    <h4><i class="fas fa-exclamation-circle"></i> Cambios en Nuestras Políticas</h4>
+                    <p>Podemos actualizar estas políticas periódicamente para reflejar cambios en nuestras prácticas o por otros motivos operativos, legales o regulatorios. Te notificaremos sobre cambios materiales publicando la nueva política en nuestra plataforma y actualizando la fecha de "Última actualización".</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Intercambio Académico FISI</h3>
+                    <p>Plataforma para compartir material académico entre estudiantes de la Facultad de Ingeniería de Sistemas e Informática de la UNMSM.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Carreras</h3>
+                    <ul>
+                        <li><a href="#">Ingeniería de Software</a></li>
+                        <li><a href="#">Ingeniería de Sistemas</a></li>
+                        <li><a href="#">Ciencias de la Computación</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#">Material Reciente</a></li>
+                        <li><a href="#">Material Popular</a></li>
+                        <li><a href="#">Subir Material</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Ciudad Universitaria, UNMSM</li>
+                        <li><i class="fas fa-phone"></i> (01) 619-7000</li>
+                        <li><i class="fas fa-envelope"></i> contacto@fisi.edu.pe</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Intercambio Académico FISI - UNMSM. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('.policy-nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all links
+                document.querySelectorAll('.policy-nav a').forEach(link => {
+                    link.classList.remove('active');
+                });
+                
+                // Add active class to clicked link
+                this.classList.add('active');
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // Calculate the position to scroll to (considering the sticky header)
+                    const headerOffset = 100;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Update active link on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.policy-section');
+            const navLinks = document.querySelectorAll('.policy-nav a');
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - 150)) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
