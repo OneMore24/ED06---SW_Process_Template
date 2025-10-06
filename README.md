@@ -60,7 +60,6 @@ docs/
 
 - 📊 [Encuesta de validación](https://forms.gle/ksuaajfXY4p3QE18A)
 - 📋 [Documentación técnica](./docs/)
-- 🎯 [Tablero de proyectos]([enlace-al-tablero])
 
 ---
 
