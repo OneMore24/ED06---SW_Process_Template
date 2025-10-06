@@ -5,7 +5,7 @@ Se define la estructura del equipo de desarrollo, sus miembros y los roles asign
 
 | Rol | Nombre | Responsabilidades |
 |-----|--------|-------------------|
-| **Jefe de Proyecto & Tester** | Ventura Enciso Alan Jesús | Coordinación general del proyecto, comunicación con la docente, diseño y ejecución de pruebas, documentación técnica |
+| **Jefe de Proyecto & Tester** | Ventura Enciso Alan Jesús | Coordinación general del proyecto, diseño y ejecución de pruebas, documentación técnica |
 | **Analista de Requisitos** | Villegas Niño Marco Antonio | Análisis y especificación de requisitos, diseño de casos de uso, validación de funcionalidades |
 | **Desarrollador Frontend** | Coaquira Mamani Milton Javier | Diseño de interfaces de usuario, implementación de componentes React, experiencia de usuario |
 | **Desarrollador Backend** | Villegas Niño Marco Antonio | Desarrollo de lógica de servidor, diseño e implementación de API REST, configuración de base de datos |
