@@ -17,7 +17,7 @@ El patrón de 2 capas seleccionado para FisiConnect separa claramente la **capa 
 - **Escalabilidad**: Permite evolucionar a 3 capas si el proyecto crece
 - **Testing**: Facilita pruebas unitarias e integrales por separado
 
-### **Tecnologías por Capa:**
+### **Responsabilidad por Capa:**
 
 | Capa | Responsabilidad |
 |------|-----------------|
