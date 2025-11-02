@@ -2,7 +2,7 @@
 
 ### **Esquema Gráfico de la Arquitectura**
 
-![Arquitectura de 3 Capas - FisiConnect](../../assets/recursos/arquitectura-3-capas.png)
+![Arquitectura de 3 Capas - FisiConnect](../../assets/recursos/3-capas.png)
 *Diagrama detallado de la arquitectura en 3 capas implementada en FisiConnect*
 
 ## 📝 Descripción del Patrón
