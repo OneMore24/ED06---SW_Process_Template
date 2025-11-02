@@ -13,15 +13,6 @@ Se descartaron otros patrones como Cliente-Servidor y Microservicios como enfoqu
 
 ---
 
-## 🎯 Justificación Técnica
-
-### **Ventajas de las 3 Capas para FisiConnect:**
-- **Separación clara**: Cada capa tiene responsabilidades específicas
-- **Mantenibilidad**: Cambios en una capa no afectan a las otras
-- **Escalabilidad independiente**: Cada capa puede escalar según necesidades
-- **Reusabilidad**: La lógica de negocio puede ser consumida por múltiples frontends
-- **Testing simplificado**: Cada capa puede probarse de forma aislada
-
 ### **Responsabilidades por Capa:**
 
 | Capa | Responsabilidad |
