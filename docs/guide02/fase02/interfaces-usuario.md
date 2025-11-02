@@ -13,7 +13,7 @@
 *Página de inicio con materiales destacados y accesos rápidos*
 
 ### **Mockup 03: Materiales Recientes**
-![Vista de materiales subidos recientemente](mockups/materiales-recientes.jpngpg)
+![Vista de materiales subidos recientemente](mockups/materiales-recientes.png)
 *Listado de materiales organizados por fecha de publicación*
 
 ### **Mockup 04: Búsqueda de Materiales**
