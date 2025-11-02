@@ -63,4 +63,4 @@ docs/
 
 ---
 
-*Desarrollado como parte del curso Procesos de Software - ED06 - 2024*
+*Desarrollado como parte del curso Procesos de Software - ED06 - 2025*
