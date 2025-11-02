@@ -20,7 +20,7 @@ El patrón de 2 capas seleccionado para FisiConnect separa claramente la **capa 
 ### **Tecnologías por Capa:**
 
 | Capa | Responsabilidad |
-|------|-------------|-----------------|
+|------|-----------------|
 | **Presentación** | Interfaz de usuario y experiencia |
 | **Datos** | Lógica de negocio y persistencia |
 
