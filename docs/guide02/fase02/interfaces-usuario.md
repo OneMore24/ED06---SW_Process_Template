@@ -32,6 +32,8 @@
 ![Perfil personal del usuario](mockups/perfil.png)
 *Dashboard personal con estadísticas e insignias*
 
+---
+
 > **Nota del Equipo ED06**: El uso de IA en esta fase nos permitió acelerar el proceso de diseño manteniendo la coherencia técnica con los requisitos establecidos. Estos mockups servirán como base para el desarrollo frontend del prototipo funcional.
 
 *Equipo ED06 - FisiConnect*
