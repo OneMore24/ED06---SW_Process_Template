@@ -32,28 +32,6 @@
 ![Perfil personal del usuario](mockups/perfil.png)
 *Dashboard personal con estadísticas e insignias*
 
-## 🛠️ Proceso de Generación con IA
-
-### **Metodología de Prompts**
-Los diseños fueron generados mediante prompts técnicos específicos que incluían:
-
-- Especificaciones de requisitos funcionales de la Guía 01
-- Paleta de colores institucional UNMSM
-- Flujos de usuario predefinidos
-- Componentes de interfaz requeridos
-- Criterios de usabilidad y accesibilidad
-
-### **Iteraciones de Diseño**
-1. **Prompt inicial**: Especificaciones técnicas básicas
-2. **Refinamiento**: Ajustes basados en feedback del equipo
-3. **Validación**: Revisión de consistencia con requisitos
-4. **Exportación**: Preparación para implementación frontend
-
-### **Herramientas IA Utilizadas**
-- **Generador de Mockups IA**: Para creación de interfaces base
-- **Herramientas de Refinamiento**: Para ajustes específicos
-- **Validadores de Diseño**: Para garantizar cumplimiento de requisitos
-
 > **Nota del Equipo ED06**: El uso de IA en esta fase nos permitió acelerar el proceso de diseño manteniendo la coherencia técnica con los requisitos establecidos. Estos mockups servirán como base para el desarrollo frontend del prototipo funcional.
 
 *Equipo ED06 - FisiConnect*
