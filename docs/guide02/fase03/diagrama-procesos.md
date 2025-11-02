@@ -17,7 +17,7 @@ Proceso que gestiona el registro de nuevos usuarios en FisiConnect, incluyendo v
 Proceso que especifica los pasos para la carga de nuevos materiales, incluyendo validación de formatos, metadatos obligatorios, revisión de contenido y publicación en la plataforma.
 
 ### **Diagrama 03: Descarga de Materiales**
-![Proceso de Descarga de Materiales](diagrama-procesos/descarga-de-materiales.png)
+![Proceso de Descarga de Materiales](diagrama-procesos/descarga-de-material.png)
 *Flujo de búsqueda, selección y descarga de recursos académicos*
 
 **Descripción**:
