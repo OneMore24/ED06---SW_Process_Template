@@ -13,7 +13,7 @@ Los requisitos funcionales fueron identificados mediante encuestas digitales apl
 - Organización y gestión de recursos
 
 ### Para administradores:
-- Moderación y validación de contenidos
+- Categorización y validación de contenidos
 - Gestión de usuarios y permisos
 - Generación de reportes y métricas de uso
 
@@ -22,11 +22,11 @@ Los requisitos funcionales fueron identificados mediante encuestas digitales apl
 - **Sistema de registro con validación institucional**: Verificación mediante correo institucional
 - **Acceso público con preview limitado**: Visualización básica para usuarios no registrados
 - **Carga de materiales con metadatos**: Incluye título, descripción, categorización y etiquetado
-- **Motor de búsqueda avanzada**: Filtros múltiples y búsqueda semántica
+- **Motor de búsqueda avanzada**: Filtros por asignatura, carrera, semestre, tipo de material y etiquetas
 - **Descarga multiplataforma**: Soporte para diversos formatos académicos
-- **Sistema de evaluación comunitaria**: Calificación de materiales y docentes
+- **Sistema de evaluación comunitaria**: Calificación de materiales
 - **Recomendaciones inteligentes**: Basadas en comportamiento e historial académico
-- **Gamificación educativa**: Sistema de insignias, ranking de colaboradores y recompensas
+- **Gamificación educativa**: Sistema de insignias y ranking de colaboradores
 
 ---
 
@@ -50,5 +50,3 @@ Formulario digital disponible en: [https://forms.gle/vJYoqqZHxQbrZ2SXA](https://
 - Observación participativa de flujos de estudio actuales
 
 *Equipo ED06 - FisiConnect*
-
-

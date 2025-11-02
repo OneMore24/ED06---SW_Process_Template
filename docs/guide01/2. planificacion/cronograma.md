@@ -9,8 +9,14 @@ Project Libre (https://www.projectlibre.com/)
 [Descargar editable (.pod)](ED06_Cronograma_ProjetLibre.pod)
 [Ver cronograma (PDF)](ED06_Cronograma_ProjetLibre.pdf)
 
-> **Descarga:** haga clic derecho en "Editable (.pod)" y elija **Guardar enlace como...**.
-> **Nota:** si ve "error loading page", haga clic derecho y pruebe **Abrir enlace en una pestaña nueva** o "Guardar enlace como...".
+## Hitos Principales del Proyecto
+- **Hito 1**: Finalización de la especificación de requisitos (04/09/2025)
+- **Hito 2**: Finalización del diseño de arquitectura y base de datos (13/09/2025)
+- **Hito 3**: Configuración completa de entornos de desarrollo (19/09/2025)
+- **Hito 4**: Finalización del desarrollo backend (24/10/2025)
+- **Hito 5**: Finalización del desarrollo frontend (27/10/2025)
+- **Hito 6**: Integración completa y pruebas (17/11/2025)
+- **Hito 7**: Entrega final del proyecto (24/11/2025)
 
 ## Actividades Principales del Cronograma
 - **Fase 01**: Especificación de requisitos (Semanas 1-3)

@@ -1,6 +1,5 @@
 # Requisitos de Hardware y Software
-Se especifican los recursos técnicos necesarios de hardware y software para el desarrollo del
-prototipo “FisiConnect”.
+Se especifican los recursos técnicos necesarios de hardware y software para el desarrollo del prototipo "FisiConnect".
 
 ## Hardware Mínimo
 - **RAM**: 8 GB (16 GB recomendado)
@@ -23,12 +22,10 @@ prototipo “FisiConnect”.
 ### Herramientas
 - VS Code
 - Git & GitHub
-- Docker
 - Figma (UI/UX)
 - Postman (API testing)
 
-## Consideraiones
-El stack tecnológico seleccionado representa un desafío formativo significativo para el
-equipo de desarrollo. Varias de estas tecnologías pueden ser nuevas para los integrantes.
+## Consideraciones
+El stack tecnológico seleccionado representa un desafío formativo significativo para el equipo de desarrollo. Varias de estas tecnologías pueden ser nuevas para los integrantes.
 
 *Equipo ED06 - FisiConnect*

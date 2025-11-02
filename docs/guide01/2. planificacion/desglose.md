@@ -14,7 +14,7 @@ Una estructura de desglose de trabajo (EDT/WBS) para el proyecto FisiConnect, de
 - Implementación de modelos de datos
 - Desarrollo de autenticación JWT con correo institucional
 - API CRUD para materiales académicos
-- API de búsqueda avanzada y filtros
+- API de búsqueda avanzada y filtros específicos
 - API de comentarios y sistema de calificaciones
 - API para sistema de gamificación (ranking e insignias)
 - Pruebas unitarias backend
@@ -26,7 +26,7 @@ Una estructura de desglose de trabajo (EDT/WBS) para el proyecto FisiConnect, de
 - Página principal y listado de materiales
 - Página de detalle de material con vista previa
 - Página de subida de materiales con especificaciones
-- Sistema de búsqueda y filtros avanzados
+- Sistema de búsqueda y filtros específicos
 - Integración de comentarios y sistema de ratings
 - Biblioteca personal y recomendaciones
 
@@ -86,5 +86,3 @@ Establecer el desglose del proyecto FisiConnect en actividades específicas, ide
 
 ## Objetivo ED06
 Tener una planificación detallada que permita la ejecución ordenada y eficiente del desarrollo de FisiConnect, con responsabilidades claramente asignadas a cada miembro del equipo.
-
-*Equipo ED06 - FisiConnect*
