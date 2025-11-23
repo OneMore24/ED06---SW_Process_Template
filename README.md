@@ -59,7 +59,7 @@ La plataforma implementa un **sistema de gamificación** con puntos, rankings e 
 
 ## 📅 Estado del Proyecto
 
-**Estado Actual:** ✅ Prototipado 
+**Estado Actual:** ✅ Prototipado                          
 **Fecha de Entrega:** Noviembre 2025  
 **Versión:** 1.0.0
 
