@@ -1,66 +1,76 @@
-# 🎓 FisiConnect - ED06
+# 🎓 FisiConnect - Plataforma Académica Colaborativa
 
-**Plataforma Académica Colaborativa para la Facultad de Ingeniería de Sistemas e Informática - UNMSM**
-
----
-
-## 📋 Descripción del Proyecto
-
-FisiConnect es una plataforma web diseñada para que los estudiantes de la FISI puedan compartir, organizar y acceder a recursos académicos de manera colaborativa, implementando un sistema de gamificación que incentiva la participación activa.
+**Proyecto Final - Procesos de Software (ED06)**  
+**Facultad de Ingeniería de Sistemas e Informática - UNMSM**  
+**Ciclo 2025-2**
 
 ---
 
-## 👥 Equipo de Desarrollo - ED06
+## 📋 Resumen del Proyecto
 
-**Integrantes:**
-- Ventura Enciso Alan Jesús - Jefe de Proyecto & Tester
-- Bohórquez Quito Tito Camilo - Desarrollador
-- Coaquira Mamani Milton Javier - Desarrollador
-- Villegas Niño Marco Antonio - Desarrollador
+FisiConnect es una plataforma web colaborativa diseñada para que los estudiantes de la Facultad de Ingeniería de Sistemas e Informática (FISI-UNMSM) puedan compartir, organizar y acceder a recursos académicos de manera eficiente. 
 
-**Asignatura:** Procesos de Software  
-**Ciclo:** 2025-1  
-**Facultad:** Ingeniería de Sistemas e Informática - UNMSM
+La plataforma implementa un **sistema de gamificación** con puntos, rankings e insignias que incentiva la participación activa de la comunidad estudiantil, promoviendo la colaboración y el intercambio de conocimientos entre estudiantes de diferentes ciclos.
 
----
+### ✨ Características Principales
 
-## 🚀 Características Principales
-
-- 📚 **Repositorio colaborativo** de apuntes y materiales académicos
-- 🏆 **Sistema de gamificación** con rankings e insignias
-- 🔍 **Búsqueda avanzada** con filtros por carrera y asignatura
-- ⭐ **Sistema de calificaciones** y reseñas de materiales
-- 📱 **Diseño responsive** (web y móvil)
+- 📚 **Repositorio de Materiales:** Subida y descarga de apuntes, presentaciones, videos y documentos académicos
+- 🔍 **Búsqueda Avanzada:** Filtros por carrera, semestre, asignatura y tipo de archivo
+- ⭐ **Sistema de Calificaciones:** Reseñas y valoraciones de materiales por la comunidad
+- 🏆 **Gamificación:** Sistema de puntos, rankings y leaderboard para motivar contribuciones
+- 👤 **Perfiles Personalizados:** Estadísticas individuales y seguimiento de contribuciones
 
 ---
 
-## 🛠️ Stack Tecnológico (Puede variar)
+## 👥 Equipo de Desarrollo
 
-**Frontend:** React + TypeScript + Tailwind CSS  
-**Backend:** Python + FastAPI + PostgreSQL  
-**Herramientas:** Git, GitHub, Docker, Figma
-
----
-
-## 📁 Estructura del Proyecto
-docs/
-├── guide01/ # Guía 01 - Requisitos & Planificación del proyecto
-└── assets/ # Recursos
+| Integrante | Rol | Responsabilidades |
+|------------|-----|-------------------|
+| **Ventura Enciso Alan Jesús** | Líder de Proyecto & Desarrollador Full Stack | Desarrollo completo del frontend y backend, implementación de autenticación, sistema de gamificación, base de datos, pruebas y documentación |
+| **Coaquira Mamani Milton Javier** | Apoyo en Frontend | Soporte en diseño de interfaces y validación de componentes |
+| **Villegas Niño Marco Antonio** | Apoyo en Testing | Soporte en pruebas funcionales y validación de casos de uso |
 
 ---
 
-## 📅 Cronograma
+## 🛠️ Tecnologías Utilizadas
 
-- **Guía 01 (Planificación):** Entrega: ##/##/2025
-- **Presentación final:** Por definir
-
----
-
-## 🔗 Enlaces Importantes
-
-- 📊 [Encuesta de validación](https://forms.gle/ksuaajfXY4p3QE18A)
-- 📋 [Documentación técnica](./docs/)
+**Frontend:** Next.js 14, TypeScript, Tailwind CSS, shadcn/ui  
+**Backend:** FastAPI, Python 3.11+, PostgreSQL 15  
+**Autenticación:** JWT (JSON Web Tokens)  
+**ORM:** SQLAlchemy 2.0  
 
 ---
 
-*Desarrollado como parte del curso Procesos de Software - ED06 - 2025*
+## 📚 Información Académica
+
+- **Asignatura:** Procesos de Software
+- **Docente:** Yudi Lucero Guzmán Monteza
+- **Ciclo Académico:** 2025-2
+- **Facultad:** Facultad de Ingeniería de Sistemas e Informática
+- **Universidad:** Universidad Nacional Mayor de San Marcos (UNMSM)
+
+---
+
+## 📂 Repositorio
+
+🔗 **GitHub:** [https://github.com/OneMore24/ED06---SW_Process_Template](https://github.com/OneMore24/ED06---SW_Process_Template)
+
+---
+
+## 📅 Estado del Proyecto
+
+**Estado Actual:** ✅ Prototipado 
+**Fecha de Entrega:** Noviembre 2025  
+**Versión:** 1.0.0
+
+---
+
+## 📞 Contacto
+
+**Líder del Proyecto:** Alan Jesús Ventura Enciso  
+**Email:** alan.ventura@unmsm.edu.pe  
+**GitHub:** [@OneMore24](https://github.com/OneMore24)
+
+---
+
+**Desarrollado con ❤️ por el Equipo ED06 - FISI UNMSM - 2025**
