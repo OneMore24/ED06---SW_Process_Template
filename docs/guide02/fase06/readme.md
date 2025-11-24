@@ -21,7 +21,7 @@ En esta sexta fase, el **Equipo ED06** documenta todas las **pruebas realizadas*
 - Gamificación (puntos, ranking)
 - Perfil de usuario
 
-**Navegadores:** Chrome, Firefox, Safari, Edge  
+**Navegadores:** Chrome, Firefox, Safari, Edge, Opera 
 **Dispositivos:** Desktop
 
 ---
