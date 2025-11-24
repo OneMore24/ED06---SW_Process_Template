@@ -20,18 +20,18 @@ El **Equipo ED06** adoptó **prototipado exploratorio** considerando:
 
 ## 🔁 Ciclo de Prototipado
 
-Prototipo 1 (Semanas 1-2)
-├── Planificación + Requisitos
-
-Prototipo 2 (Semanas 3-6)
-├── Diseño + Implementación básica
-
-Prototipo 3 (Semanas 7-10)
-├── Funcionalidades completas
-
-Prototipo 4 (Semanas 11-12)
-├── Testing + Refinamiento final
-
+Prototipo 1 (Semanas 1-2)                                                                        
+├── Planificación + Requisitos                                                                        
+                                                                                                                                                
+Prototipo 2 (Semanas 3-6)                                                                        
+├── Diseño + Implementación básica                                                                        
+                                                                                                                                                
+Prototipo 3 (Semanas 7-10)                                                                        
+├── Funcionalidades completas                                                                        
+                                                                                                                                                
+Prototipo 4 (Semanas 11-12)                                                                        
+├── Testing + Refinamiento final                                                                        
+                                                                                                                                                
 ---
 
 ## 👥 Trabajo Colaborativo
