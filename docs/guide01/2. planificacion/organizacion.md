@@ -43,13 +43,13 @@ Equipo ED06 - FisiConnect
 
 | Área | Responsable Principal | Apoyo |
 |------|----------------------|-------|
-| **Backend API** | Alan | - |
-| **Base de Datos** | Alan | - |
-| **Frontend** | Alan | Coaquira |
-| **Autenticación** | Alan | - |
-| **Gamificación** | Alan | - |
-| **Testing** | Alan | Villegas |
-| **Documentación** | Alan | Todos |
+| **Backend API** | Alan Ventura | - |
+| **Base de Datos** | Alan Ventura | - |
+| **Frontend** | Alan Ventura | Coaquira |
+| **Autenticación** | Alan Ventura | - |
+| **Gamificación** | Alan Ventura | - |
+| **Testing** | Alan Ventura | Villegas |
+| **Documentación** | Alan Ventura | Todos |
 
 ---
 
