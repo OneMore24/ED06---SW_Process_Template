@@ -1,4 +1,8 @@
-# 🔍 Respuesta a la Pregunta de Investigación - FisiConnect
+# 🔍 Respuesta a la Pregunta de Investigación
+
+---
+
+**¿El modelo de ciclo de vida en espiral es aplicable para terminar el proyecto de desarrollo de un prototipo de software en tres (03) meses durante el semestre académico 2025-II para el curso de “Procesos de Software”?**
 
 ---
 
@@ -10,60 +14,37 @@
 
 ## ✅ RESPUESTA: SÍ
 
-El modelo en espiral (implementado como **Prototipado Exploratorio**) **SÍ fue aplicable** y permitió completar FisiConnect exitosamente en 12 semanas.
+El modelo en espiral **sí es aplicable** para culminar exitosamente el desarrollo de un prototipo de software en un periodo académico de 3 meses.
 
 ---
 
 ## 📋 Fundamentación
 
-**¿Por qué esta aproximación fue ideal?**
+**Razones clave por las que el ciclo de vida espiral es adecuado:**
 
-- **Iteraciones progresivas:** 4 prototipos en 12 semanas
-  - Proto 1: Planificación (semanas 1-2)
-  - Proto 2: Backend + Frontend básico (semanas 3-6)
-  - Proto 3: Funcionalidades completas (semanas 7-10)
-  - Proto 4: Refinamiento y testing (semanas 11-12)
-
-- **Validación temprana:** Cada iteración incluía testing y corrección
-- **Flexibilidad:** Permitió cambios sin retrasos mayores
-- **Aprendizaje:** Equipo sin experiencia ganó capacidad progresivamente
-
-### **Gestión de Riesgos**
-
-El modelo espiral identificó y mitigó riesgos en cada ciclo:
-- Riesgos técnicos resueltos en iteración 2
-- Defectos corregidos antes de iteración final
-- Documentación actualizada continuamente
-
-### **Equipo en Formación**
-
-- 3 desarrolladores sin experiencia previa en proyectos software
-- Prototipado exploratorio permitió aprendizaje "learning by doing"
-- Roles flexibles según necesidad de cada iteración
+- **Iteración progresiva:** Permite dividir el trabajo en ciclos o prototipos sucesivos, incrementando funcionalidad y calidad en cada vuelta, adaptándose a los avances reales del equipo.
+- **Validación temprana y continua:** Cada ciclo incluye etapas de planificación, análisis, construcción y pruebas, facilitando la detección y corrección de errores antes de avanzar.
+- **Gestión de riesgos:** Promueve la identificación y mitigación temprana de riesgos técnicos, de integración y de alcance durante el desarrollo.
+- **Flexibilidad:** Se adapta fácilmente a cambios de requisitos y nuevas necesidades sin causar retrasos críticos.
+- **Aprendizaje incremental:** Es especialmente útil en equipos en formación, porque cada iteración afianza conocimientos y habilidades a través de la práctica.
 
 ---
 
-## 🎯 Factores Críticos de Éxito
+## 🎯 Factores Críticos para el Éxito
 
-1. **Planificación realista:** 12 semanas suficientes para 4 prototipos
-2. **Equipo comprometido:** Dedicación total durante semestre
-3. **Stack moderno:** Tecnologías conocidas y documentadas
-4. **Testing continuo:** Validación en cada iteración
-5. **Documentación ágil:** Markdown + GitHub actualizado siempre
+1. **Planificación realista:** Un cronograma ajustado por fases permite distribuir el trabajo y evaluar avances en cada ciclo.
+2. **Validación y feedback:** Cada iteración termina con una revisión y validación, lo que reduce el riesgo de acumular defectos.
+3. **Documentación iterativa:** Se actualiza en cada ciclo, manteniendo registro ágil de decisiones y cambios.
+4. **Trabajo colaborativo:** Favorece la organización flexible de tareas de acuerdo con los puntos fuertes y debilidades de cada integrante.
+5. **Mejora continua:** Cada ciclo optimiza el proceso, incorporando aprendizajes y adaptaciones.
 
 ---
 
 ## 💡 Conclusión
 
-El **Prototipado Exploratorio** (modelo espiral adaptado) fue **altamente efectivo** porque:
+El ciclo de vida espiral demuestra ser una estrategia efectiva para proyectos académicos de corto plazo, especialmente cuando los equipos enfrentan incertidumbre, curva de aprendizaje o cambios. Su estructura iterativa permite controlar mejor los riesgos, ajustar funcionalidades y lograr resultados funcionales y documentados en el plazo previsto.
 
-- ✅ Cumplió los requisitos en 12 semanas
-- ✅ Permitió iteraciones rápidas sin paralizar
-- ✅ Facilitó aprendizaje en equipo nuevo
-- ✅ Identificó y corrigió defectos tempranamente
-- ✅ Generó prototipo funcional y documentado
-
-**Recomendación:** Este modelo es **recomendable** para cursos académicos con equipos en formación y proyectos de 3 meses.
+**Recomendación general:** Es un modelo recomendable para cursos prácticos, prototipos, ambientes de incertidumbre o para equipos con poca experiencia previa.
 
 ---
 
