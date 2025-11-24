@@ -2,13 +2,9 @@
 
 ---
 
-**¿El modelo de ciclo de vida en espiral es aplicable para terminar el proyecto de desarrollo de un prototipo de software en tres (03) meses durante el semestre académico 2025-II para el curso de “Procesos de Software”?**
-
----
-
 ## ❓ Pregunta
 
-**¿El modelo en espiral es aplicable para terminar un prototipo de software en 3 meses durante el semestre 2025-II?**
+**¿El modelo de ciclo de vida en espiral es aplicable para terminar el proyecto de desarrollo de un prototipo de software en tres (03) meses durante el semestre académico 2025-II para el curso de “Procesos de Software”?**
 
 ---
 
