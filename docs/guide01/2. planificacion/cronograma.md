@@ -4,23 +4,6 @@ Muestra las fases, dependencias, hitos y línea de tiempo para el desarrollo de 
 
 ---
 
-## ⏱️ Línea de Tiempo (12 semanas)
-
-Semana 1-2 | Fase 1: Análisis y Diseño
-|
-Semana 3-6 | Fase 2: Desarrollo Backend (paralelo con Fase 3)
-Semana 3-6 | Fase 3: Desarrollo Frontend (paralelo con Fase 2)
-|
-Semana 7-8 | Continuación Backend y Frontend
-|
-Semana 9-10 | Fase 4: Integración y Pruebas
-|
-Semana 11 | Fase 5: Documentación y Ajustes Finales
-|
-Semana 12 | Presentación Final y Entrega
-
----
-
 ## 🎯 Hitos Principales del Proyecto
 
 | # | Hito | Semana | Descripción |
