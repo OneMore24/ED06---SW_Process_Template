@@ -11,7 +11,7 @@ Los requisitos funcionales se expresan en lenguaje técnico a partir de los requ
 - Los usuarios no autenticados no podrán subir materiales ni crear reseñas
 
 ### Gestión de Materiales
-- El sistema debe permitir subida de archivos académicos (.pdf, .pptx, .mp4, .docx, .avi, .mov, .mkv)
+- El sistema debe permitir subida de archivos académicos (.pdf, .pptx, .mp4, .docx, .xlsx, .xls)
 - El tamaño máximo de archivo permitido es de 50 MB
 - Cada material debe incluir: título, descripción, carrera, asignatura, semestre
 - El sistema debe validar y rechazar archivos con extensiones no permitidas
