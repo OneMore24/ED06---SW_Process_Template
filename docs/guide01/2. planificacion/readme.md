@@ -1,14 +1,19 @@
-# Fase 02: Planificación del proyecto FisiConnect
+# Planificación del Proyecto FisiConnect
 
-El plan del proyecto establece los recursos, el desglose de trabajo y el cronograma para el desarrollo de **FisiConnect** por parte del **Equipo ED06**. Esta planificación considera las capacidades del equipo, los recursos disponibles y los hitos necesarios para implementar exitosamente la plataforma colaborativa para la FISI-UNMSM.
+El plan del proyecto establece los **recursos, desglose de trabajo y cronograma** para el desarrollo de FisiConnect por parte del **Equipo ED06**. Esta planificación considera las capacidades del equipo, los recursos disponibles y los hitos necesarios para implementar exitosamente la plataforma colaborativa para la FISI-UNMSM.
 
-## 📊 Componentes del Plan de Proyecto
+---
 
-- [Introducción](introduccion.md)
-- [Organización del proyecto](organizacion.md)
-- [Requisitos de hardware y software](hwsw.md)
-- [Desglose del trabajo](desglose.md)
-- [Riesgos](riesgos.md)
-- [Cronograma del proyecto](cronograma.md)
+## 📂 Componentes del Plan de Proyecto
 
-*Equipo ED06 - FisiConnect*
+- **[Introducción](introduccion.md)** - Contexto y objetivos de la planificación
+- **[Organización del Proyecto](organizacion.md)** - Estructura del equipo y roles
+- **[Requisitos de Hardware y Software](hwsw.md)** - Tecnologías y herramientas utilizadas
+- **[Desglose del Trabajo](desglose.md)** - Tareas y actividades por fase
+- **[Riesgos](riesgos.md)** - Identificación y mitigación de riesgos
+- **[Cronograma del Proyecto](cronograma.md)** - Línea de tiempo y hitos
+
+---
+
+**Equipo:** ED06 - FisiConnect  
+**Fecha:** Noviembre 2025

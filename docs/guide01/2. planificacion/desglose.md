@@ -1,88 +1,134 @@
-# Desglose del Trabajo (WBS) - FisiConnect
-Una estructura de desglose de trabajo (EDT/WBS) para el proyecto FisiConnect, descomponiendo las actividades en niveles organizados.
+# 📊 Desglose del Trabajo (WBS) - FisiConnect
 
-## 1. Planificación y Diseño
-- Definición de requisitos y alcance del proyecto
-- Planificación de arquitectura técnica
-- Diseño de base de datos y modelos
-- Diseño de interfaces de usuario
-- Configuración de entornos de desarrollo
-- Establecimiento de repositorio GitHub
-
-## 2. Desarrollo Backend
-- Configuración de FastAPI y PostgreSQL
-- Implementación de modelos de datos
-- Desarrollo de autenticación JWT con correo institucional
-- API CRUD para materiales académicos
-- API de búsqueda avanzada y filtros específicos
-- API de comentarios y sistema de calificaciones
-- API para sistema de gamificación (ranking e insignias)
-- Pruebas unitarias backend
-
-## 3. Desarrollo Frontend
-- Configuración de React + Vite + TypeScript
-- Diseño de componentes base con Tailwind CSS
-- Página de autenticación y registro
-- Página principal y listado de materiales
-- Página de detalle de material con vista previa
-- Página de subida de materiales con especificaciones
-- Sistema de búsqueda y filtros específicos
-- Integración de comentarios y sistema de ratings
-- Biblioteca personal y recomendaciones
-
-## 4. Integración y Pruebas
-- Integración completa frontend-backend
-- Pruebas de funcionalidad completa
-- Pruebas de usabilidad con usuarios reales
-- Pruebas de rendimiento y carga
-- Resolución de bugs y optimización final
-
-## 5. Entrega y Documentación
-- Pruebas finales de aceptación
-- Documentación técnica completa
-- Preparación de presentación final
-- Entrega del proyecto funcional
-
-#### Tabla de Desglose de Trabajo - ED06
-| ID | Tarea | Entregable | Responsable |
-|----|-------|------------|-------------|
-| 1.1 | Definición de requisitos y alcance | Documento de requisitos | Villegas Niño |
-| 1.2 | Planificación de arquitectura técnica | Diagrama de arquitectura | Villegas Niño |
-| 1.3 | Diseño de base de datos | Modelo ER / Esquema BD | Villegas Niño |
-| 1.4 | Diseño de interfaces | Wireframes / Prototipos | Coaquira Mamani |
-| 1.5 | Configuración de entornos de desarrollo | Entorno configurado | Bohórquez Quito |
-| 1.6 | Establecimiento de repositorio GitHub | Repositorio configurado | Ventura Enciso |
-| 2.1 | Configuración de FastAPI y PostgreSQL | Servidor y BD configurados | Villegas Niño |
-| 2.2 | Implementación de modelos de datos | Modelos de datos implementados | Villegas Niño |
-| 2.3 | Desarrollo de autenticación JWT | Módulo de autenticación | Bohórquez Quito |
-| 2.4 | API CRUD para materiales académicos | Endpoints CRUD funcionales | Villegas Niño |
-| 2.5 | API de búsqueda y filtros | Endpoints de búsqueda | Bohórquez Quito |
-| 2.6 | API de comentarios y calificaciones | Endpoints de interacción | Bohórquez Quito |
-| 2.7 | API sistema de gamificación | Endpoints de ranking/insignias | Villegas Niño |
-| 2.8 | Pruebas unitarias backend | Suite de pruebas unitarias | Ventura Enciso |
-| 3.1 | Configuración de React + Vite | Entorno frontend configurado | Coaquira Mamani |
-| 3.2 | Diseño de componentes base | Componentes reutilizables | Coaquira Mamani |
-| 3.3 | Página de autenticación | Login/Register funcionales | Coaquira Mamani |
-| 3.4 | Página principal y listado | Vista principal | Coaquira Mamani |
-| 3.5 | Página de detalle de material | Vista de detalle | Coaquira Mamani |
-| 3.6 | Página de subida de materiales | Formulario de subida | Coaquira Mamani |
-| 3.7 | Sistema de búsqueda y filtros | Búsqueda integrada | Coaquira Mamani |
-| 3.8 | Integración de comentarios y ratings | Sistema de valoración | Coaquira Mamani |
-| 3.9 | Biblioteca personal | Biblioteca usuario | Coaquira Mamani |
-| 4.1 | Integración completa frontend-backend | Comunicación funcional | Ventura Enciso |
-| 4.2 | Pruebas de funcionalidad completa | Reporte de pruebas | Ventura Enciso |
-| 4.3 | Pruebas de usabilidad | Feedback de usabilidad | Ventura Enciso |
-| 4.4 | Pruebas de rendimiento | Reporte de rendimiento | Ventura Enciso |
-| 4.5 | Resolución de bugs y optimización | Código optimizado | Equipo ED06 |
-| 5.1 | Pruebas finales | Validación final | Ventura Enciso |
-| 5.2 | Documentación técnica | Manual técnico | Ventura Enciso |
-| 5.3 | Preparación de presentación final | Slides y demo | Ventura Enciso |
-| 5.4 | Entrega del proyecto | Proyecto entregado | Equipo ED06 |
+Estructura de desglose del proyecto organizada en **5 fases principales** con sus hitos correspondientes.
 
 ---
 
-# Propósito
-Establecer el desglose del proyecto FisiConnect en actividades específicas, identificando hitos y entregables asociados con cada actividad, considerando los requisitos técnicos definidos en la Fase 01.
+## 🎯 Fase 1: Análisis de Requisitos y Diseño
+**Duración:** 2 semanas  
+**Hito:** ✅ Especificaciones técnicas completas
 
-## Objetivo ED06
-Tener una planificación detallada que permita la ejecución ordenada y eficiente del desarrollo de FisiConnect, con responsabilidades claramente asignadas a cada miembro del equipo.
+### Actividades
+- Definición de requisitos funcionales mediante encuestas
+- Diseño de arquitectura (frontend/backend/BD)
+- Modelo de base de datos (usuarios, materiales, reseñas)
+- Wireframes de interfaces principales
+- Configuración de repositorio GitHub
+
+**Responsable Principal:** Alan Ventura
+
+---
+
+## 🔧 Fase 2: Desarrollo Backend (API + BD)
+**Duración:** 4 semanas  
+**Hito:** ✅ API REST funcional y documentada
+
+### Actividades
+- Configuración FastAPI + PostgreSQL
+- Modelos SQLAlchemy (User, Material, Review)
+- Autenticación JWT + bcrypt
+- Endpoints CRUD materiales
+- Endpoints búsqueda y filtros
+- Endpoints reseñas y calificaciones
+- Sistema de gamificación (puntos, ranking)
+- Testing con Postman
+- Optimización de queries
+
+**Responsable Principal:** Alan Ventura
+
+---
+
+## 🎨 Fase 3: Desarrollo Frontend (Interfaz)
+**Duración:** 4 semanas  
+**Hito:** ✅ Interfaz completa y responsive
+
+### Actividades
+- Configuración Next.js + TypeScript
+- Componentes UI con shadcn/ui
+- Sistema de autenticación (login/register)
+- Dashboard principal con materiales
+- Página de detalles de material
+- Formulario de subida de materiales
+- Búsqueda avanzada con filtros
+- Sistema de calificaciones y reseñas
+- Perfil de usuario y estadísticas
+- Leaderboard
+- Diseño responsive (móvil/tablet/desktop)
+
+**Responsable Principal:** Alan Ventura  
+**Apoyo:** Coaquira (validación UI)
+
+---
+
+## 🔗 Fase 4: Integración y Pruebas
+**Duración:** 1.5 semanas  
+**Hito:** ✅ Sistema completamente integrado y validado
+
+### Actividades
+- Integración frontend-backend
+- Pruebas funcionales (todos los requisitos)
+- Pruebas de usabilidad con usuarios beta
+- Corrección de bugs críticos
+- Optimización de rendimiento
+- Validación de seguridad (JWT, validaciones)
+- Testing de descarga de archivos
+- Pruebas en diferentes navegadores
+
+**Responsable Principal:** Alan Ventura  
+**Apoyo:** Villegas (testing funcional)
+
+---
+
+## 📚 Fase 5: Documentación y Presentación
+**Duración:** 0.5 semanas  
+**Hito:** ✅ Proyecto documentado y presentado
+
+### Actividades
+- Documentación técnica completa
+- README principal del proyecto
+- Guía de instalación y configuración
+- Manual de API (Swagger/OpenAPI)
+- Preparación de presentación final
+- Video demo del sistema
+- Entrega formal del proyecto
+
+**Responsable Principal:** Alan Ventura  
+**Apoyo:** Todo el equipo
+
+---
+
+## 📋 Tabla Resumen de Tareas
+
+| Fase | Descripción | Duración |
+|------|-------------|----------|
+| **Fase 1** | Análisis de requisitos y diseño | 2 semanas |
+| **Fase 2** | Desarrollo backend (API + BD) | 4 semanas |
+| **Fase 3** | Desarrollo frontend (interfaz) | 4 semanas |
+| **Fase 4** | Integración y pruebas | 1.5 semanas |
+| **Fase 5** | Documentación y presentación | 0.5 semanas |
+| **TOTAL** | Proyecto completo | **12 semanas** |
+
+---
+
+## 🎯 Hitos del Proyecto
+
+| # | Hito | Semana | Estado |
+|---|------|--------|--------|
+| **H1** | Especificaciones aprobadas | Semana 2 | ✅ Completado |
+| **H2** | API backend funcional | Semana 6 | ✅ Completado |
+| **H3** | Frontend integrado | Semana 10 | ✅ Completado |
+| **H4** | Sistema validado | Semana 11.5 | ✅ Completado |
+| **H5** | Proyecto entregado | Semana 12 | ✅ Completado |
+
+---
+
+## 🎓 Objetivo del Desglose
+
+Establecer una planificación detallada de **12 semanas** que permita la **ejecución ordenada y eficiente** del desarrollo de FisiConnect, con responsabilidades claramente asignadas y hitos verificables en cada fase del proyecto.
+
+---
+
+**Elaborado por:** Equipo ED06 - FisiConnect  
+**Fecha:** Noviembre 2025 
+
+
