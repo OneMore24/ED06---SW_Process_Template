@@ -1,52 +1,110 @@
-# Requisitos de usuario
+# 👥 Requisitos de Usuario
 
-## Obtención de requisitos
-Los requisitos funcionales fueron identificados mediante encuestas digitales aplicadas a estudiantes de la Facultad de Ingeniería de Sistemas e Informática de la UNMSM, utilizando técnicas de recopilación de requisitos documentadas en el Anexo A.
+## 📊 Obtención de Requisitos
 
-## Ámbito funcional del sistema
-
-### Para estudiantes:
-- Registro y autenticación en la plataforma
-- Carga de material académico y recursos educativos
-- Búsqueda, visualización y descarga de contenidos
-- Sistema de comentarios y valoración de materiales
-- Organización y gestión de recursos
-
-### Para administradores:
-- Categorización y validación de contenidos
-- Gestión de usuarios y permisos
-- Generación de reportes y métricas de uso
-
-## Funcionalidades principales implementadas
-
-- **Sistema de registro con validación institucional**: Verificación mediante correo institucional
-- **Acceso público con preview limitado**: Visualización básica para usuarios no registrados
-- **Carga de materiales con metadatos**: Incluye título, descripción, categorización y etiquetado
-- **Motor de búsqueda avanzada**: Filtros por asignatura, carrera, semestre, tipo de material y etiquetas
-- **Descarga multiplataforma**: Soporte para diversos formatos académicos
-- **Sistema de evaluación comunitaria**: Calificación de materiales
-- **Recomendaciones inteligentes**: Basadas en comportamiento e historial académico
-- **Gamificación educativa**: Sistema de insignias y ranking de colaboradores
+Los requisitos funcionales fueron identificados mediante **encuestas digitales** aplicadas a estudiantes de la Facultad de Ingeniería de Sistemas e Informática de la UNMSM, utilizando técnicas de recopilación de requisitos documentadas en el **Anexo A**.
 
 ---
 
-# Anexo A: Técnicas de obtención de requisitos de software
+## 🎯 Ámbito Funcional del Sistema
 
-## Metodología aplicada
-Encuestas digitales mediante Google Forms dirigida a la comunidad estudiantil
+### Funcionalidades para Estudiantes
 
-## Objetivo de la recopilación
-Identificar patrones de estudio, dificultades académicas, necesidades específicas y factores de motivación en el uso de recursos educativos digitales
+El sistema FisiConnect está diseñado exclusivamente para estudiantes, quienes pueden:
 
-## Población muestral
-46 estudiantes de pregrado de la Facultad de Ingeniería de Sistemas e Informática - UNMSM
+- **Registro y autenticación** en la plataforma
+- **Subida de materiales** académicos (PDF, PPTX, videos, documentos)
+- **Búsqueda avanzada** con filtros múltiples
+- **Visualización y descarga** de contenidos
+- **Sistema de calificaciones** con estrellas y comentarios
+- **Perfil personalizado** con estadísticas de contribución
+- **Competencia amistosa** mediante sistema de puntos y ranking
 
-## Instrumento de recolección
+---
+
+## ✨ Funcionalidades Principales Implementadas
+
+### Sistema de Autenticación
+- **Registro con email** y contraseña
+- **Validación segura** mediante JWT tokens
+- **Persistencia de sesión** en navegador
+
+### Gestión de Materiales
+- **Subida de archivos** con validación de tipo y tamaño (máx. 50MB)
+- **Metadatos completos**: título, descripción, carrera, asignatura, semestre
+- **Organización automática** por categorías
+- **Contador de descargas y visualizaciones**
+
+### Búsqueda Avanzada
+- **Filtros múltiples**: carrera, semestre, asignatura, tipo de archivo
+- **Búsqueda por texto** en título y descripción
+- **Ordenamiento** por fecha, popularidad y calificación
+- **Paginación eficiente** (20 resultados por página)
+
+### Sistema de Evaluación
+- **Calificación con estrellas** (1-5)
+- **Comentarios detallados** de usuarios
+- **Promedio ponderado** de calificaciones
+- **Historial completo** de reseñas
+
+### Gamificación
+- **Sistema de puntos** por contribuciones:
+  - Subir material: +50 puntos
+  - Recibir descarga: +5 puntos
+  - Calificación alta: +10 puntos
+- **Ranking dinámico** actualizado en tiempo real
+- **Leaderboard público** con top 50 usuarios
+
+### Perfil de Usuario
+- **Estadísticas personales**:
+  - Materiales subidos
+  - Descargas recibidas
+  - Vistas acumuladas
+  - Calificación promedio
+- **Mis materiales**: Lista de contenido propio
+- **Avatar personalizable**
+
+---
+
+## 📋 Anexo A: Técnicas de Obtención de Requisitos
+
+### Metodología Aplicada
+**Encuestas digitales** mediante Google Forms dirigidas a la comunidad estudiantil de FISI-UNMSM
+
+### Objetivo de la Recopilación
+Identificar:
+- Patrones de estudio y organización de materiales
+- Dificultades para encontrar recursos académicos de calidad
+- Necesidades específicas de filtrado y búsqueda
+- Factores de motivación para compartir contenido
+
+### Población Muestral
+**46+ estudiantes** de pregrado de la Facultad de Ingeniería de Sistemas e Informática - UNMSM
+
+### Instrumento de Recolección
 Formulario digital disponible en: [https://forms.gle/vJYoqqZHxQbrZ2SXA](https://forms.gle/vJYoqqZHxQbrZ2SXA)
 
-## Técnicas complementarias
-- Análisis de competencias existentes en el dominio educativo
-- Prototipado iterativo con retroalimentación temprana de usuarios
-- Observación participativa de flujos de estudio actuales
+### Técnicas Complementarias
+- **Análisis de plataformas existentes**: Google Drive compartido, grupos de WhatsApp, Telegram
+- **Entrevistas informales**: Conversaciones con estudiantes de diferentes ciclos
+- **Prototipado iterativo**: Validación temprana con usuarios beta
+- **Observación de flujos actuales**: Cómo comparten materiales actualmente
 
-*Equipo ED06 - FisiConnect*
+### Hallazgos Principales
+
+**Problemas Identificados:**
+- Desorganización de materiales compartidos en grupos
+- Dificultad para evaluar calidad de contenido
+- Falta de motivación para compartir apuntes
+- Búsqueda ineficiente (archivos perdidos en chats)
+
+**Soluciones Propuestas:**
+- Plataforma centralizada con organización automática
+- Sistema de calificaciones comunitario
+- Gamificación con puntos y rankings
+- Buscador avanzado con múltiples filtros
+
+---
+
+**Elaborado por:** Equipo ED06 - FisiConnect  
+**Fecha:** Noviembre 2025  

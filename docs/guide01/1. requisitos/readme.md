@@ -1,16 +1,33 @@
-# Fase 01: Especificación de requisitos de software - FisiConnect
+# 📋 Requisitos del Sistema
 
-El **Equipo ED06** ha definido el proyecto **FisiConnect** como una plataforma colaborativa para estudiantes de la FISI-UNMSM. Bajo la supervisión del docente, desarrollaremos los siguientes entregables técnicos para esta fase:
+Esta sección contiene la documentación completa del proceso de ingeniería de requisitos realizado para FisiConnect, incluyendo la identificación, categorización, priorización y validación de los requisitos del sistema.
 
-- [Requisitos de usuario](requisitos-usuarios.md)
-- [Categorización lógica de requisitos de usuario](categorizacion.md)
-- [Negociación y discusión de requisitos de usuario (Opcional)](negociacion.md)
-- [Especificación de requisitos de software](rtm.md)
-- [Validación de los requisitos de software](validacion.md)
+## 📂 Contenido
+
+- **[Requisitos de Usuario](./requisitos-usuarios.md)** - Requisitos funcionales y no funcionales identificados
+- **[Categorización](./categorizacion.md)** - Clasificación de requisitos por tipo y prioridad
+- **[Negociación](./negociacion.md)** - Proceso de validación con stakeholders
+- **[RTM](./rtm.md)** - Matriz de Trazabilidad de Requisitos
+- **[Validación](./validacion.md)** - Técnicas y resultados de validación
+
+## 🎯 Metodología Aplicada
+
+El proceso de ingeniería de requisitos se realizó siguiendo las siguientes etapas:
+
+1. **Identificación** - Recopilación mediante entrevistas con estudiantes FISI
+2. **Análisis** - Categorización según funcionalidad y prioridad
+3. **Especificación** - Documentación formal de requisitos
+4. **Validación** - Verificación con usuarios potenciales y docente
+
+## 📊 Resumen de Requisitos
+
+| Tipo | Cantidad | Prioridad Alta |
+|------|----------|----------------|
+| Funcionales | 12 | 8 |
+| No Funcionales | 8 | 5 |
+| **Total** | **20** | **13** |
 
 ---
 
-## 🎯 Objetivo de la Fase
-Establecer las bases técnicas sólidas para el desarrollo de FisiConnect, asegurando que todos los requisitos estén correctamente especificados, validados y listos para la fase de planificación e implementación.
-
-*Equipo ED06 - FisiConnect*
+**Última actualización:** Noviembre 2025  
+**Equipo:** ED06 - FISI UNMSM

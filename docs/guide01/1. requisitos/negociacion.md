@@ -1,12 +1,24 @@
-# Negociación y discusión de requisitos
+# 🤝 Negociación de Requisitos
 
-## Estado de la negociación
-El proceso de negociación de requisitos no se ha llevado a cabo en esta fase inicial del proyecto. Está planificado realizarlo durante las etapas de validación con los stakeholders, donde se revisarán los requisitos propuestos y se priorizarán en función de los recursos y tiempo disponible.
+## Contexto del Proyecto
 
-## Próximos pasos
-- Realizar sesiones de validación con representantes de los usuarios (estudiantes y administradores)
-- Establecer prioridades en base a la viabilidad técnica y el valor agregado
-- Documentar acuerdos y cambios en los requisitos
+FisiConnect es un **proyecto académico comunitario** desarrollado para la Facultad de Ingeniería de Sistemas e Informática de la UNMSM, **sin stakeholders externos ni clientes comerciales**.
 
-*Equipo ED06 - FisiConnect*
+---
+
+## ✅ Conclusión
+
+Por ser un proyecto de **beneficio común** para estudiantes, no fue necesario:
+- Negociar presupuestos
+- Resolver conflictos entre stakeholders
+- Ajustar requisitos por restricciones comerciales
+- Establecer prioridades competitivas
+
+Todos los requisitos se implementaron según su valor para la comunidad estudiantil.
+
+---
+
+**Elaborado por:** Equipo ED06 - FisiConnect  
+**Fecha:** Noviembre 2025
+
 
