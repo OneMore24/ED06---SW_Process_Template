@@ -21,48 +21,6 @@ Informe de defectos encontrados durante testing, su estado y resolución.
 
 ---
 
-## 📊 Estadísticas de Errores
-
-| Métrica | Valor |
-|---------|-------|
-| **Total Defectos** | 10 |
-| **Cerrados** | 10 (100%) |
-| **Pendientes** | 0 |
-| **Críticos** | 1 |
-| **Altos** | 3 |
-| **Medios** | 4 |
-| **Bajos** | 2 |
-
----
-
-## 🔧 Errores por Categoría
-
-### **Autenticación (1)**
-- ERR-001: Token JWT sin refresh
-
-### **Materiales (2)**
-- ERR-002: Validación extensión .rar
-- ERR-005: Contador descarga duplicado
-
-### **Búsqueda (1)**
-- ERR-003: Resultados duplicados en filtro
-
-### **Calificaciones (1)**
-- ERR-004: Promedio no actualiza
-
-### **Ranking (1)**
-- ERR-006: Orden incorrecto
-
-### **UI/UX (2)**
-- ERR-007: Avatar no carga Safari
-- ERR-008: Responsive 320px
-
-### **API/BD (2)**
-- ERR-009: Error emoji en comentarios
-- ERR-010: Query búsqueda lento
-
----
-
 ## ✅ Estado Final
 
 **Todos los errores han sido identificados, documentados y corregidos.**
