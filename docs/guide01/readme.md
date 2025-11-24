@@ -12,14 +12,14 @@ Desarrollar una plataforma colaborativa para estudiantes de la **FISI-UNMSM** qu
 
 ## 📂 Estructura de Documentación
 
-### **Rama 01 — Especificación de Requisitos**
+### **Fase 01 — Especificación de Requisitos**
 - `requisitos-usuarios.md` - Requisitos funcionales y su obtención
 - `categorizacion.md` - Clasificación (mandatorios, mejora, sin valor)
 - `negociacion.md` - Validación comunitaria de requisitos
 - `rtm.md` - Especificación técnica de requisitos
 - `validacion.md` - Métodos de validación aplicados
 
-### **Rama 02 — Planificación del Proyecto**
+### **Fase 02 — Planificación del Proyecto**
 - `introduccion.md` - Contexto, objetivos y limitaciones
 - `organizacion.md` - Estructura del equipo ED06 y roles
 - `hwsw.md` - Stack tecnológico y requisitos técnicos
