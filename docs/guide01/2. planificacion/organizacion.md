@@ -16,8 +16,8 @@ Se define la estructura del equipo de desarrollo, sus miembros y los roles asign
 
 ## 🏗️ Estructura del Equipo
 
-Equipo ED06 - FisiConnect
-│
+Equipo ED06 - FisiConnect                                                 
+│                                                                                                  
 ├── Jefe de Proyecto                                                  
 │ └── Ventura Enciso Alan Jesús                                                 
 │ ├── Frontend (Next.js + TypeScript)                                                 
@@ -32,10 +32,10 @@ Equipo ED06 - FisiConnect
 │ └── Testing de usabilidad                                                 
 │                                                                                                  
 └── Apoyo Testing                                                 
-└── Villegas Niño Marco Antonio                                                 
-├── Pruebas funcionales                                                 
-├── Validación de requisitos                                                 
-└── Control de calidad                                                 
+ └── Villegas Niño Marco Antonio                                                 
+ ├── Pruebas funcionales                                                 
+ ├── Validación de requisitos                                                 
+ └── Control de calidad                                                 
                                                                                                   
 ---
 
