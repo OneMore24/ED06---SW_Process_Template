@@ -16,18 +16,19 @@ Proceso que gestiona el registro de nuevos usuarios en FisiConnect, incluyendo v
 **Descripción**:
 Proceso que especifica los pasos para la carga de nuevos materiales, incluyendo validación de formatos, metadatos obligatorios, revisión de contenido y publicación en la plataforma.
 
-### **Diagrama 03: Descarga de Materiales**
-![Proceso de Descarga de Materiales](diagrama-procesos/descarga-de-material.png)
-*Flujo de búsqueda, selección y descarga de recursos académicos*
+### **Diagrama 03: Registro + uso de la plataforma**
+![Proceso de interacción de Materiales](diagrama-procesos/registro&interaccion.png)
+*Flujo de registro, descarga y calificacion de material*
 
 **Descripción**:
-Proceso que detalla el flujo completo de búsqueda de materiales académicos, incluyendo filtros avanzados, visualización de detalles, verificación de permisos y descarga segura de archivos.
+Proceso que detalla el flujo completo registro, búsqueda de materiales académicos, incluyendo filtros avanzados, visualización de detalles, calificación de material y exploracion de recursos.
 
 ---
 
 > **Nota del Equipo ED06**: Los diagramas fueron desarrollados en Bizagi Modeler siguiendo el estándar BPMN 2.0, asegurando claridad y precisión en la representación de los procesos críticos de FisiConnect.
 
-*Equipo ED06 - FisiConnect*
+**Elaborado por:** Equipo ED06 - FisiConnect  
+**Fecha:** Noviembre 2025
 
 
 

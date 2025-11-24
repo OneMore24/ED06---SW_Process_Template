@@ -30,5 +30,6 @@ Se descartaron otros patrones como Cliente-Servidor y Microservicios como enfoqu
 
 > **Nota del Equipo ED06**: La arquitectura de 3 capas proporciona el balance perfecto entre simplicidad y robustez para FisiConnect, permitiendo un desarrollo educativo eficiente mientras se mantiene la capacidad de evolucionar en el futuro.
 
-*Equipo ED06 - FisiConnect*
+**Elaborado por:** Equipo ED06 - FisiConnect  
+**Fecha:** Noviembre 2025
 

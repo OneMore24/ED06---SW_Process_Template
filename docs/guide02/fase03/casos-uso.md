@@ -27,7 +27,6 @@
 **Reglas de Negocio:**
 - RN-001: Solo se aceptan correos con dominio @unmsm.edu.pe
 - RN-002: Cada correo solo puede registrar una cuenta
-- RN-003: La verificación debe completarse en máximo 24 horas
 
 ---
 
@@ -47,9 +46,9 @@
 6. El sistema almacena el material y notifica éxito
 
 **Reglas de Negocio:**
-- RN-004: Formatos permitidos: PDF, PPTX, DOCX, XLSX, MP4
-- RN-005: Tamaño máximo por archivo: 300 MB
-- RN-006: Metadatos obligatorios: título, categoría, descripción
+- RN-003: Formatos permitidos: PDF, PPTX, DOCX, XLSX, MP4, XLS
+- RN-004: Tamaño máximo por archivo: 50 MB
+- RN-005: Metadatos obligatorios: título, categoría, descripción, carrera, semestre
 
 ---
 
@@ -69,56 +68,11 @@
 6. El archivo se descarga al dispositivo
 
 **Reglas de Negocio:**
-- RN-007: Usuarios no autenticados solo ven vista previa limitada
-- RN-008: Máximo 20 descargas por hora por usuario
-- RN-009: Se registra estadística de descargas por material
-
----
-
-### **Caso de Uso: Administrar Biblioteca Personal**
-
-**ID:** CU-004  
-**Actor:** Usuario registrado  
-**Descripción:** Gestión de materiales guardados en la biblioteca personal del usuario  
-**Precondiciones:** Usuario autenticado  
-
-**Flujo Principal:**
-1. El usuario accede a "Mi Biblioteca"
-2. Visualiza materiales guardados organizados
-3. Puede filtrar por categorías personales
-4. Puede eliminar materiales de la biblioteca
-5. Puede organizar en carpetas personalizadas
-6. El sistema guarda los cambios en tiempo real
-
-**Reglas de Negocio:**
-- RN-010: Límite de 500 materiales en biblioteca personal
-- RN-011: Los cambios se sincronizan automáticamente
-- RN-012: Se mantiene historial de materiales eliminados por 30 días
-
----
-
-### **Caso de Uso: Moderación de Contenido**
-
-**ID:** CU-005  
-**Actor:** Administrador  
-**Descripción:** Gestión y validación de contenidos subidos por usuarios  
-**Precondiciones:** Usuario con rol de administrador  
-
-**Flujo Principal:**
-1. El administrador accede al panel de moderación
-2. Revisa materiales reportados o pendientes
-3. Evalúa contenido según políticas
-4. Aprueba, rechaza o solicita modificaciones
-5. Notifica al usuario sobre la decisión
-6. Actualiza estado del material en el sistema
-
-**Reglas de Negocio:**
-- RN-013: Los materiales inapropiados se rechazan inmediatamente
-- RN-014: Los usuarios con 3 rechazos consecutivos son suspendidos
-- RN-015: Todo material debe revisarse en máximo 48 horas
+- RN-006: Se registra estadística de descargas por material
 
 ---
 
 > **Nota del Equipo ED06**: Los casos de uso documentados representan las interacciones fundamentales entre los usuarios y el sistema FisiConnect, asegurando que todos los requisitos funcionales identificados en la Guía 01 estén adecuadamente cubiertos en el diseño del sistema.
 
-*Equipo ED06 - FisiConnect*
+**Elaborado por:** Equipo ED06 - FisiConnect  
+**Fecha:** Noviembre 2025

@@ -123,4 +123,5 @@ El modelo ER presentado se implementará en **PostgreSQL** con las siguientes co
 
 > **Nota del Equipo ED06**: El modelo Entidad-Relación establece los cimientos sólidos para la base de datos de FisiConnect, garantizando coherencia completa con los requisitos funcionales y casos de uso definidos. La estructura permite el crecimiento escalable del sistema mientras mantiene la integridad de los datos académicos.
 
-*Equipo ED06 - FisiConnect*
+**Elaborado por:** Equipo ED06 - FisiConnect  
+**Fecha:** Noviembre 2025
