@@ -40,25 +40,24 @@ Se especifican los recursos técnicos necesarios para el desarrollo de FisiConne
 - **Deployment:** Vercel (frontend), Railway (backend)
 
 ---
-
+                                                                               
 ## 📋 Dependencias del Proyecto
-
-### Frontend (package.json)
-next@14.0+
-react@18.0+
-typescript@5.0+
-tailwindcss@3.0+
-shadcn/ui@latest
-
-### Backend (requirements.txt)
-fastapi==0.104+
-sqlalchemy==2.0+
-psycopg2-binary==2.9+
-python-jose==3.3+
-passlib==1.7+
-python-dotenv==1.0+
-
-
+                                                                               
+### Frontend (package.json)                                                                               
+next@14.0+                                                                               
+react@18.0+                                                                               
+typescript@5.0+                                                                               
+tailwindcss@3.0+                                                                               
+shadcn/ui@latest                                                                               
+                                                                               
+### Backend (requirements.txt)                                                                               
+fastapi==0.104+                                                                               
+sqlalchemy==2.0+                                                                               
+psycopg2-binary==2.9+                                                                               
+python-jose==3.3+                                                                               
+passlib==1.7+                                                                               
+python-dotenv==1.0+                                                                               
+                                                                               
 ---
 
 ## 🎓 Desafíos Formativos
