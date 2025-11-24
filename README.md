@@ -54,6 +54,7 @@ La plataforma implementa un **sistema de gamificación** con puntos, rankings e 
 ## 📂 Repositorio
 
 🔗 **GitHub:** [https://github.com/OneMore24/ED06---SW_Process_Template](https://github.com/OneMore24/ED06---SW_Process_Template)
+🔗 **Video Tutorial:** [https://1drv.ms/v/c/0ba11ab020db53f4/IQBvi8YA1xcuR7oREmfaNHA2Ac8_NtMwBibFOg33iAWQ0jg?e=doIGh1](https://1drv.ms/v/c/0ba11ab020db53f4/IQBvi8YA1xcuR7oREmfaNHA2Ac8_NtMwBibFOg33iAWQ0jg?e=doIGh1)
 
 ---
 
