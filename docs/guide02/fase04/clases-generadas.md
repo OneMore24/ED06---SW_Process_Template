@@ -24,11 +24,11 @@ Modelos y tablas generadas en PostgreSQL a partir del esquema definido en Fase 0
 ---
 
 ## 🔗 Relaciones
-
-users (1) → (N) materials (Un usuario, múltiples materiales)
-users (1) → (N) reviews (Un usuario, múltiples reseñas)
-materials (1) → (N) reviews (Un material, múltiples reseñas)
-
+                                                          
+users (1) → (N) materials (Un usuario, múltiples materiales)                                                           
+users (1) → (N) reviews (Un usuario, múltiples reseñas)                                                          
+materials (1) → (N) reviews (Un material, múltiples reseñas)                                                          
+                                                          
 ---
 
 ## 🛠️ Generación
